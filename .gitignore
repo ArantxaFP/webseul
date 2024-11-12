@@ -13,16 +13,6 @@
 .zsh_sessions/
 .zprofile
 
-# Ignorar imágenes en todas las carpetas, excepto en `dist/`
-*.jpg
-*.png
-*.gif
-
-# Permitir imágenes en la carpeta `dist/`
-!dist/*.jpg
-!dist/*.png
-!dist/*.gif
-
 # Ignorar archivos de otros niveles fuera de este directorio
 ../../*
 ../*
