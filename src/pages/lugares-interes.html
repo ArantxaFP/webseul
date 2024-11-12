@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares de interés - SEÚL</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta name="description" content="Pàgina dedicada a la ciudad de Seúl">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include para incorporar el header como componente reutilizado -->
+    <include src="./components/header.html"></include>
+
+
+
+    <!-- Contenido principal -->
+    <main class="centrado">
+        <article class="biography">
+            <h2>Lugares de interés</h2>
+            <img src="../assets/img/gwanghwamun-palacio-presentacion-lugares.webp" alt="Imagen del Palacio de Gwanghwamun">
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+        </article>
+        <aside>
+            <h3>Lorem ipsum</h3>
+            <ul>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+            </ul>
+        </aside>
+        <a href="cultura-pop.html"><button id="seul-button">Conoce la cultura de Seúl</button></a>
+
+        <!-- Flecha SVG para hacer scroll hacia arriba -->
+        <div id="btn-scroll-top" class="scroll-top hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                style="fill: #CD2E3A; cursor: pointer;">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
+                </path>
+            </svg>
+        </div>
+
+    </main>
+
+    <!-- Include para incorporar el footer como componente reutilizado -->
+    <include src="./components/footer.html"></include>
+
+
+    <!-- Archivo de script JavaScript -->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

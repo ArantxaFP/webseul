@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - SEÚL</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <meta name="description" content="Pàgina dedicada a la ciudad de Seúl">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include para incorporar el header como componente reutilizado -->
+    <include src="./components/header.html"></include>
+
+    <!-- Contenido principal -->
+    <main class="centrado">
+        <section>
+            <h2>La Historia de la home de esta web</h2>
+            <p>La home tiene el proósito de presentar el contenido del resto de la web y lo más destacado es la imagen
+                ubicada como fondo del header y también el heder que en ese caso no se coge del include.</p>
+        </section>
+
+        <section>
+            <h2>Contenido de la página categoría</h2>
+            <p>Lorem ipsum</p>
+        </section>
+
+        <section>
+            <h2>Página de enlaces</h2>
+            <p>Contiene la información de los lugares de los que se han sacado las imágenes.</p>
+        </section>
+
+
+        <!-- Flecha SVG para hacer scroll hacia arriba -->
+        <div id="btn-scroll-top" class="scroll-top hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                style="fill: #CD2E3A; cursor: pointer;">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
+                </path>
+            </svg>
+        </div>
+
+    </main>
+    <!-- Include para incorporar el footer como componente reutilizado -->
+    <include src="./components/footer.html"></include>
+
+    <!-- Archivo de script JavaScript -->
+    <script src="../assets/js/script.js"></script>
+
+
+</body>
+
+</html>

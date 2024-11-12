@@ -1,0 +1,21 @@
+# Ignorar archivos y carpetas de sistema
+.DS_Store
+.cache/
+.config/
+.npm/
+.npmrc
+.gitconfig
+.local/
+.vscode/
+.Trash/
+.parcel-cache/
+*.log
+.zsh_sessions/
+.zprofile
+*.jpg
+*.png
+*.gif
+
+# Ignorar archivos de otros niveles
+../../*
+../*
