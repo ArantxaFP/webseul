@@ -34,7 +34,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #333;
 }
 
@@ -90,7 +90,6 @@ main {
 
 .container {
   margin: 0 auto;
-
 }
 
 
@@ -130,7 +129,14 @@ Estilos header para la home y para el componenete header
   width: 100%;
   z-index: 1000;
   overflow-x: hidden;
-  /* Evita desbordamiento horizontal */
+}
+
+
+@media (max-width: 767px) {
+.header,
+.header-container-home {
+  width: 100%;
+}
 }
 
 /* Estilos para la sección del logo */
@@ -192,18 +198,6 @@ Estilos header para la home y para el componenete header
   position: relative;
 }
 
-#main-menu-home ul li .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #f9f9f9;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 2000;
-  padding: 10px 0;
-  width: 180px;
-  /* Para el ancho del sumenú*/
-}
 
 
 #main-menu-home ul li.dropdown:hover .submenu {
@@ -264,14 +258,12 @@ Estilos header para la home y para el componenete header
   display: block;
   position: absolute;
   top: 15px;
-  right: 60px;
   z-index: 1003;
 }
 
 .close-btn {
   position: absolute;
   top: 15px;
-  right: 60px;
   background: none;
   border: none;
   font-size: 28px;
@@ -298,11 +290,28 @@ Estilos header para la home y para el componenete header
     padding: 5px;
     align-items: center;
   }
+
+  #main-menu-home ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    padding: 10px 0;
+    width: 180px;
+   
+  }
+  
+
+
 }
 
 @media (max-width: 767px) {
   .menu-toggle {
     display: block;
+    right: 50px;
   }
 
   #main-menu ul,
@@ -344,7 +353,7 @@ Estilos header para la home y para el componenete header
     color: #CD2E3A;
   }
 
-  /* Estilos para los submenús en móviles
+  /* AJUSTAR Estilos para los submenús en móviles
   .submenu {
     display: block;
     flex-direction: column;
@@ -357,9 +366,6 @@ Estilos header para la home y para el componenete header
     display: flex;
   } */
 }
-
-
-
 
 
 /* Estilos para la imagen dentro del contenedor */
@@ -485,7 +491,7 @@ footer nav ul li a.current {
 @media (max-width: 768px) {
   .footer {
     padding-top: 10px;
-    padding-bottom: 85%;
+    padding-bottom: 95%;
     text-align: center;
   }
 
@@ -502,29 +508,24 @@ footer nav ul li a.current {
 }
 
 
-
-
 /*********************************************
 Animación skyline prefooter home
 **********************************************/
 
 #contenedor-texto-skyline {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: 1px auto 0px;
-  padding: 7%;
   background-color: white;
 }
 
 #skyline {
-  position: absolute;
   width: 19%;
-  height: auto;
   top: 1px;
-  left: 15%;
-  animation: volar 60s linear infinite;
+  animation: desplazamiento 80s linear infinite;
 }
-@keyframes volar {
+
+@keyframes desplazamiento {
   0% {
     transform: translateX(0);
   }
@@ -547,13 +548,14 @@ Animación skyline prefooter home
 }
 
 
+@media (max-width: 767px) {
+  #contenedor-texto-skyline {
+    display: none;
+  }
+}
 
 /********************************************
 Estilos para la página home
-**********************************************/
-
-/********************************************
-Efecto título presentación home
 **********************************************/
 
 body.home-page {
@@ -635,7 +637,7 @@ Imagen gif dentro de texto título header home
     font-size: 1.5em;
     text-align: center;
     width: 100%;
-    padding: 0 0;
+    padding: 35% 2%;
     box-sizing: border-box;
     min-height: 10vh;
     display: flex;
@@ -754,12 +756,12 @@ Estilo contenido home
   /* Asegura que orden mobile img + txt */
   .image-column {
     order: -1;
-    width: 100%;
+    width: 90%;
   }
 
   .text-column {
     order: 1;
-    width: 100%;
+    width: 90%;
   }
 
   .links-row {
@@ -859,7 +861,7 @@ Estilo cita prefooter home
   border-left: 5px solid #CD2E3A;
   background-color: #f9f9f9;
   padding: 2% 4%;
-  margin: 6%;
+  margin: 6% 6% 1% 6%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -990,7 +992,7 @@ Imagen gif dentro de texto título header home
     font-size: 1.5em;
     text-align: center;
     width: 100%;
-    padding: 0 0;
+    padding: 35% 2%;
     box-sizing: border-box;
     min-height: 10vh;
     display: flex;
@@ -998,6 +1000,12 @@ Imagen gif dentro de texto título header home
     justify-content: center;
     margin-top: 15%;
   }
+
+
+
+
+
+
 
   div.explora-page h1 {
     font-size: 1.5em;
@@ -1178,6 +1186,84 @@ Estilos para el hover de la img de explora
 /********************************************
 Estilos específicos para las páginas detalle 
 **********************************************/
+
+.lugares-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  div.lugares-page {
+    background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  div.lugares-page h1 {
+    font-size: 2.4em;
+    text-shadow: 
+      2px 2px 4px rgba(255, 255, 255, 1), 
+      -2px -2px 4px rgba(255, 255, 255, 1), 
+      2px -2px 4px rgba(255, 255, 255, 1),
+      -2px 2px 4px rgba(255, 255, 255, 1);
+  }
+
+
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  div.lugares-page  {
+    background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-mob.webp");
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 35% 2%;
+    box-sizing: border-box;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+  div.lugares-page  h1 {
+    font-size: 1.5em;
+    text-shadow: 
+      2px 2px 4px rgba(255, 255, 255, 1), 
+      -2px -2px 4px rgba(255, 255, 255, 1), 
+      2px -2px 4px rgba(255, 255, 255, 1),
+      -2px 2px 4px rgba(255, 255, 255, 1);
+  }
+
+  
+}
+
+
+
+
+
+
+
+
 
 /* Estilos para la imagen de portada */
 .portada-image {

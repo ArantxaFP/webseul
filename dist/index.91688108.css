@@ -32,7 +32,7 @@ h3 {
 
 h4 {
   color: #333;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 a {
@@ -106,6 +106,12 @@ main {
   box-shadow: 0 8px 16px #0003;
 }
 
+@media (width <= 767px) {
+  .header, .header-container-home {
+    width: 100%;
+  }
+}
+
 .logo-header, .logo-header-home {
   align-items: center;
   display: flex;
@@ -150,18 +156,6 @@ main {
 
 #main-menu-home ul li.dropdown {
   position: relative;
-}
-
-#main-menu-home ul li .submenu {
-  z-index: 2000;
-  background-color: #f9f9f9;
-  width: 180px;
-  padding: 10px 0;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  box-shadow: 0 8px 16px #0003;
 }
 
 #main-menu-home ul li.dropdown:hover .submenu {
@@ -212,7 +206,6 @@ main {
   display: block;
   position: absolute;
   top: 15px;
-  right: 60px;
 }
 
 .close-btn {
@@ -224,7 +217,6 @@ main {
   font-size: 28px;
   position: absolute;
   top: 15px;
-  right: 60px;
 }
 
 @media (width >= 768px) {
@@ -243,11 +235,24 @@ main {
     list-style-type: none;
     display: flex;
   }
+
+  #main-menu-home ul li .submenu {
+    z-index: 2000;
+    background-color: #f9f9f9;
+    width: 180px;
+    padding: 10px 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 8px 16px #0003;
+  }
 }
 
 @media (width <= 767px) {
   .menu-toggle {
     display: block;
+    right: 50px;
   }
 
   #main-menu ul, #main-menu-home ul {
@@ -389,7 +394,7 @@ footer nav ul li a.current {
   .footer {
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 85%;
+    padding-bottom: 95%;
   }
 
   .footer .container {
@@ -405,22 +410,18 @@ footer nav ul li a.current {
 
 #contenedor-texto-skyline {
   background-color: #fff;
-  width: 100%;
+  width: 90%;
   margin: 1px auto 0;
-  padding: 7%;
   position: relative;
 }
 
 #skyline {
   width: 19%;
-  height: auto;
-  animation: 60s linear infinite volar;
-  position: absolute;
+  animation: 80s linear infinite desplazamiento;
   top: 1px;
-  left: 15%;
 }
 
-@keyframes volar {
+@keyframes desplazamiento {
   0% {
     transform: translateX(0);
   }
@@ -439,6 +440,12 @@ footer nav ul li a.current {
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@media (width <= 767px) {
+  #contenedor-texto-skyline {
+    display: none;
   }
 }
 
@@ -502,7 +509,7 @@ body.home-page {
     width: 100%;
     min-height: 10vh;
     margin-top: 15%;
-    padding: 0;
+    padding: 35% 2%;
     font-size: 1.5em;
     display: flex;
   }
@@ -595,12 +602,12 @@ body.home-page {
 
   .image-column {
     order: -1;
-    width: 100%;
+    width: 90%;
   }
 
   .text-column {
     order: 1;
-    width: 100%;
+    width: 90%;
   }
 
   .links-row {
@@ -667,7 +674,7 @@ body.home-page {
 .centrado-blockquote {
   background-color: #f9f9f9;
   border-left: 5px solid #cd2e3a;
-  margin: 6%;
+  margin: 6% 6% 1%;
   padding: 2% 4%;
   box-shadow: 2px 2px 5px #0000001a;
 }
@@ -782,7 +789,7 @@ body.home-page {
     width: 100%;
     min-height: 10vh;
     margin-top: 15%;
-    padding: 0;
+    padding: 35% 2%;
     font-size: 1.5em;
     display: flex;
   }
@@ -921,6 +928,60 @@ body.home-page {
 
 .image-container:hover .overlay {
   opacity: .4;
+}
+
+.lugares-page {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+@media (width >= 768px) {
+  div.lugares-page {
+    color: #0f64cd;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url("gwanghwamun-palacio-presentacion-lugares-desk.256fae01.webp");
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 60vh;
+    padding: 0;
+    font-size: 2.5rem;
+    display: flex;
+  }
+
+  div.lugares-page h1 {
+    text-shadow: 2px 2px 4px #fff, -2px -2px 4px #fff, 2px -2px 4px #fff, -2px 2px 4px #fff;
+    font-size: 2.4em;
+  }
+}
+
+@media (width <= 767px) {
+  div.lugares-page {
+    color: #0f64cd;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url("gwanghwamun-palacio-presentacion-lugares-mob.e499542f.webp");
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 10vh;
+    margin-top: 15%;
+    padding: 35% 2%;
+    font-size: 1.5em;
+    display: flex;
+  }
+
+  div.lugares-page h1 {
+    text-shadow: 2px 2px 4px #fff, -2px -2px 4px #fff, 2px -2px 4px #fff, -2px 2px 4px #fff;
+    font-size: 1.5em;
+  }
 }
 
 .portada-image {
