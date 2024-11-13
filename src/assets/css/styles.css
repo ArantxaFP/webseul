@@ -25,10 +25,12 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  padding-top: 4%;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 h4 {
@@ -41,7 +43,6 @@ a {
   text-decoration: none;
   font-family: 'Montserrat';
 }
-
 a :hover {
   color: #CD2E3A;
   text-decoration: none;
@@ -54,6 +55,15 @@ p {
   color: #333;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 160%;
+}
 
 /********************************************
 Estilos contenedores
@@ -82,6 +92,24 @@ main {
   margin: 0 auto;
 
 }
+
+
+/* Estilos para contenedores más estrechos en desktop */
+.content-limited-width {
+  max-width: 800px; 
+  margin: 0 auto 3% auto; 
+  padding: 0 20px;
+}
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+  .content-limited-width {
+    max-width: 95%; 
+    padding: 0 10px; 
+    }
+}
+
+
 
 /********************************************
 Estilos header para la home y para el componenete header
@@ -457,7 +485,7 @@ footer nav ul li a.current {
 @media (max-width: 768px) {
   .footer {
     padding-top: 10px;
-    padding-bottom: 65%;
+    padding-bottom: 85%;
     text-align: center;
   }
 
@@ -496,7 +524,6 @@ Animación skyline prefooter home
   left: 15%;
   animation: volar 60s linear infinite;
 }
-
 @keyframes volar {
   0% {
     transform: translateX(0);
@@ -572,7 +599,7 @@ Imagen gif dentro de texto título header home
     background-size: cover;
     background-position: center;
     color: #fff;
-    text-shadow: 3px 4px 4px rgba(#ffffff, 0.8);
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -604,8 +631,8 @@ Imagen gif dentro de texto título header home
     background-size: cover;
     background-position: center;
     color: #fff;
-    text-shadow: 3px 4px 4px rgba(#ffffff, 0.8);
-    font-size: 1.9em;
+    text-shadow: 2px 1px 1px rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
     text-align: center;
     width: 100%;
     padding: 0 0;
@@ -614,13 +641,13 @@ Imagen gif dentro de texto título header home
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    margin-top: 15%;
   }
 
   div.home-page h1 {
-    font-size: 1.9em;
+    font-size: 1.5em;
+    margin: 10px;
   }
-
 
   .text-container {
     position: relative;
@@ -634,9 +661,7 @@ Imagen gif dentro de texto título header home
   .clipped-text {
     font-size: 20vw;
   }
-
 }
-
 
 .highlight {
   color: #0F64CD;
@@ -709,7 +734,7 @@ Estilo contenido home
   border-radius: 10px;
 }
 
-/* Estilos específicos para la sección de enlaces */
+/* Estilos específicos para la sección de accesos */
 .links-row {
   flex-direction: row;
 }
@@ -726,7 +751,7 @@ Estilo contenido home
     padding: 10px;
   }
 
-  /* Asegura que la imagen esté siempre arriba y el texto abajo en móviles */
+  /* Asegura que orden mobile img + txt */
   .image-column {
     order: -1;
     width: 100%;
@@ -805,6 +830,16 @@ Estilo flecha arriba y flecha abajo home
   }
 }
 
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  .scroll-down-arrow {
+    display: none;
+  }
+
+  .scroll-down-arrow img {
+    display: none;
+  }
+}
 
 
 /* Estilos para el botón de scroll hacia arriba */
@@ -812,7 +847,6 @@ Estilo flecha arriba y flecha abajo home
   fill: #CD2E3A;
   cursor: pointer;
 }
-
 
 
 
@@ -953,7 +987,7 @@ Imagen gif dentro de texto título header home
     background-size: cover;
     background-position: center;
     color: #0F64CD;
-    font-size: 1.9em;
+    font-size: 1.5em;
     text-align: center;
     width: 100%;
     padding: 0 0;
@@ -962,10 +996,11 @@ Imagen gif dentro de texto título header home
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15%;
   }
 
   div.explora-page h1 {
-    font-size: 1.9em;
+    font-size: 1.5em;
     text-shadow: 
       2px 2px 4px rgba(255, 255, 255, 1), 
       -2px -2px 4px rgba(255, 255, 255, 1), 
@@ -988,17 +1023,11 @@ Imagen gif dentro de texto título header home
 }
 
 
-
-
-
-
-
-
 /********************************************
 Estilos para el listado de explora
 **********************************************/
 
-.member-list {
+.explora-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1006,7 +1035,7 @@ Estilos para el listado de explora
   margin: 0 auto;
 }
 
-.member {
+.explora {
   width: calc(50% - 40px);
   margin: 20px;
   padding: 10px;
@@ -1016,20 +1045,20 @@ Estilos para el listado de explora
 
 /* Para tablets: 2 elementos por fila */
 @media (max-width: 768px) {
-  .member {
+  .explora {
     width: calc(50% - 40px);
   }
 }
 
 /* Para móviles: 1 elemento por fila */
 @media (max-width: 480px) {
-  .member {
+  .explora {
     width: 100%;
     margin: 10px 0;
   }
 }
 
-.member img {
+.explora img {
   width: 70%;
   height: auto;
   margin: 0 auto;
@@ -1038,7 +1067,7 @@ Estilos para el listado de explora
 
 
 /********************************************
-Estilos para los botones de los miembros 
+Estilos para los botones de línias
 **********************************************/
 
 #seul-button {
@@ -1055,6 +1084,7 @@ Estilos para los botones de los miembros
   z-index: 1;
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 1px;
+  margin: 2% 1% 4% 1%;
 }
 
 
@@ -1104,7 +1134,7 @@ Estilos para los botones de los miembros
 
 
 /********************************************
-Estilos para el hover de la img de los miembros 
+Estilos para el hover de la img de explora 
 **********************************************/
 /* Contenedor de la imagen */
 .image-container {
@@ -1146,7 +1176,7 @@ Estilos para el hover de la img de los miembros
 
 
 /********************************************
-Estilos específicos para la página de cada miembro 
+Estilos específicos para las páginas detalle 
 **********************************************/
 
 /* Estilos para la imagen de portada */
@@ -1166,7 +1196,6 @@ Estilos específicos para la página de cada miembro
 }
 
 
-
 /* Estilo para centrar solo el contenido específico */
 .centrado {
   display: flex;
@@ -1176,8 +1205,6 @@ Estilos específicos para la página de cada miembro
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
 
 /* Media queries para ajustes específicos de mobile */
 @media (max-width: 768px) {
