@@ -39,10 +39,11 @@ h4 {
 }
 
 a {
-  color: #333;
+  color:#0F64CD;
   text-decoration: none;
   font-family: 'Montserrat';
 }
+
 a :hover {
   color: #CD2E3A;
   text-decoration: none;
@@ -300,13 +301,9 @@ Estilos header para la home y para el componenete header
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 2000;
     padding: 10px 0;
-    width: 180px;
-   
+    width: 210px;
+     }
   }
-  
-
-
-}
 
 @media (max-width: 767px) {
   .menu-toggle {
@@ -770,6 +767,43 @@ Estilo contenido home
 }
 
 
+
+.icon-container {
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto; 
+  justify-content: center;
+}
+
+.text-column {
+  text-align: center;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+.icon-link svg {
+  fill: currentColor;
+  width: 60px;
+  height: 60px;
+}
+
+.icon-link:hover {
+  color: red;
+}
+
+
+
+
 /********************************************
 Imagen interior home
 **********************************************/
@@ -931,7 +965,7 @@ Estilos específicos para la página de explora seúl
 }
 
 /********************************************
-Imagen gif dentro de texto título header home
+Imagen gif dentro de texto título
 **********************************************/
 
 .clipped-text {
@@ -1002,11 +1036,6 @@ Imagen gif dentro de texto título header home
   }
 
 
-
-
-
-
-
   div.explora-page h1 {
     font-size: 1.5em;
     text-shadow: 
@@ -1029,6 +1058,9 @@ Imagen gif dentro de texto título header home
     font-size: 20vw;
   }
 }
+
+
+
 
 
 /********************************************
@@ -1072,6 +1104,8 @@ Estilos para el listado de explora
   margin: 0 auto;
   display: block;
 }
+
+
 
 
 /********************************************
@@ -1184,16 +1218,55 @@ Estilos para el hover de la img de explora
 
 
 /********************************************
+Estilos vídeo página explora 
+**********************************************/
+
+.video-container {
+  position: relative;
+  width: 100%; 
+  max-width: 800px; 
+  padding-bottom: 56.25%; 
+  margin: 20px auto; 
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/********************************************
 Estilos específicos para las páginas detalle 
 **********************************************/
 
+/********************************************
+Página detalle lugares de interés 
+**********************************************/
+
+
 .lugares-page {
   display: block;
-  width: 100%;
+  width: 90%;
   height: auto;
   margin: auto;
 }
 
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+   margin: 0 auto;
+}
+
+
+.centrado article {
+  width: 80%;
+  margin: 0 auto;
+}
 
 
 /* Media query para tablet horizontal (768px) y mayores */
@@ -1208,21 +1281,11 @@ Estilos específicos para las páginas detalle
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    min-height: 60vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
-  div.lugares-page h1 {
-    font-size: 2.4em;
-    text-shadow: 
-      2px 2px 4px rgba(255, 255, 255, 1), 
-      -2px -2px 4px rgba(255, 255, 255, 1), 
-      2px -2px 4px rgba(255, 255, 255, 1),
-      -2px 2px 4px rgba(255, 255, 255, 1);
-  }
-
 
 }
 
@@ -1245,15 +1308,66 @@ Estilos específicos para las páginas detalle
     margin-top: 15%;
   }
 
-  div.lugares-page  h1 {
-    font-size: 1.5em;
-    text-shadow: 
-      2px 2px 4px rgba(255, 255, 255, 1), 
-      -2px -2px 4px rgba(255, 255, 255, 1), 
-      2px -2px 4px rgba(255, 255, 255, 1),
-      -2px 2px 4px rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+
+
+/********************************************
+Página detalle cultura pop
+**********************************************/
+
+
+.cultura-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  div.cultura-page {
+    background-image: url("../img/cultura-pop-seul-portada-desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  div.cultura-page  {
+    background-image: url("../img/cultura-pop-seul-portada-mob.webp");
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 35% 2%;
+    box-sizing: border-box;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+  }
   
 }
 
@@ -1265,73 +1379,13 @@ Estilos específicos para las páginas detalle
 
 
 
-/* Estilos para la imagen de portada */
-.portada-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-
-/* Estilos generales para responsividad de imagen */
-.responsive-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
 
-/* Estilo para centrar solo el contenido específico */
-.centrado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Media queries para ajustes específicos de mobile */
-@media (max-width: 768px) {
-
-  .biography,
-  aside {
-    width: 90%;
-    padding: 20px;
-  }
-
-}
-
-/* Aseguro que el contenido de texto también esté centrado */
-.biography h1,
-.biography p,
-aside h3,
-aside ul {
-  text-align: center;
-
-}
 
 
-/* Estilos para el título dentro del aside */
-aside h3 {
-  text-align: center;
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
 
-/* Estilos para la lista dentro del aside */
-aside ul {
-  list-style-type: none;
-  padding: 0;
-}
 
-/* Estilos para los elementos de la lista dentro del aside */
-aside li {
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
+
 
 
 
@@ -1350,22 +1404,6 @@ section {
   list-style-type: none;
 }
 
-.video-container {
-  position: relative;
-  width: 70%;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  margin-top: 20px;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 
 
 /********************************************
@@ -1378,7 +1416,7 @@ Estilos página de enlaces para enlaces subrayados
 
 /* Estilo inicial del enlace */
 a.link-destacado {
-  color: #808080;
+  color: #0F64CD;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
@@ -1387,7 +1425,7 @@ a.link-destacado {
 
 /* Oscurecer el texto al hacer hover */
 a.link-destacado:hover {
-  color: #333333;
+  color: #0F64CD;
 }
 
 /* Pseudo-elemento para la línea de subrayado */
