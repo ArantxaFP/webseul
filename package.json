@@ -16,10 +16,13 @@
   "author": "Aranzazu Fernandez",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.0",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.12.0",
+    "parcel": "^2.13.0",
     "posthtml-include": "^2.0.1",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "sass": "^1.81.0",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
     "aos": "^2.3.4"
