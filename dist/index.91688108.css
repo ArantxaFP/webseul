@@ -48,7 +48,6 @@ a :hover {
 
 p {
   color: #333;
-  margin-bottom: 3%;
   font-family: Montserrat;
   font-size: 1.2rem;
   font-weight: 400;
@@ -654,7 +653,7 @@ body.home-page {
   color: red;
 }
 
-.image-container-mvsuperboard {
+.image-container-namsan {
   background-image: url("seul_contrastes_arquitectonicos_desk.61d0f978.webp");
   background-position: center;
   background-size: cover;
@@ -663,7 +662,7 @@ body.home-page {
 }
 
 @media (width <= 767px) {
-  .image-container-mvsuperboard {
+  .image-container-namsan {
     background-image: url("seul_contrastes_arquitectonicos_mob.1e84a7fc.webp");
     height: 200px;
   }
@@ -870,22 +869,16 @@ body.home-page {
 
 @media (width <= 768px) {
   .explora {
-    width: calc(50% - 40px);
-  }
-}
-
-@media (width <= 480px) {
-  .explora {
     width: 100%;
     margin: 10px 0;
   }
-}
 
-.explora img {
-  width: 70%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+  .explora img {
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .seul-button {
@@ -1015,6 +1008,16 @@ body.home-page {
   margin: 0 auto;
 }
 
+@media (width <= 767px) {
+  .lugares-page {
+    width: 96%;
+  }
+
+  .centrado, .centrado article {
+    width: 98%;
+  }
+}
+
 @media (width >= 768px) {
   div.lugares-page {
     color: #0f64cd;
@@ -1049,6 +1052,52 @@ body.home-page {
     padding: 35% 2%;
     font-size: 1.5em;
     display: flex;
+  }
+}
+
+.content-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+@media (width >= 768px) {
+  .content-list {
+    flex-direction: row;
+    gap: 20px;
+    max-width: 90%;
+    margin: 5px auto;
+  }
+
+  .content-list .image-column {
+    width: 70%;
+  }
+
+  .content-list .text-column {
+    width: 30%;
+  }
+
+  .content-list .image-column img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (width <= 767px) {
+  .content-list {
+    flex-direction: column;
+    width: 98%;
+  }
+
+  .content-list .image-column, .content-list .text-column {
+    text-align: center;
+    width: 98%;
+  }
+
+  .content-list .image-column img {
+    border-radius: 8px;
+    width: 98%;
+    height: auto;
   }
 }
 
