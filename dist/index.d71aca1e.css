@@ -398,8 +398,8 @@ footer nav ul li a.current {
 @media (width <= 768px) {
   .footer {
     text-align: center;
+    margin-bottom: 15px;
     padding-top: 10px;
-    padding-bottom: 95%;
   }
 
   .footer .container {
