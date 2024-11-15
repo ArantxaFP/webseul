@@ -39,7 +39,7 @@ h4 {
 }
 
 a {
-  color:#0F64CD;
+  color: #0F64CD;
   text-decoration: none;
   font-family: 'Montserrat';
 }
@@ -54,6 +54,7 @@ p {
   font-weight: 400;
   font-size: 1.2rem;
   color: #333;
+  margin-bottom: 3%;
 }
 
 h1,
@@ -63,7 +64,7 @@ h4,
 h5,
 h6,
 p {
-  line-height: 160%;
+  line-height: 150%;
 }
 
 /********************************************
@@ -96,18 +97,26 @@ main {
 
 /* Estilos para contenedores más estrechos en desktop */
 .content-limited-width {
-  max-width: 800px; 
-  margin: 0 auto 3% auto; 
+  max-width: 800px;
+  margin: 0 auto 3% auto;
   padding: 0 20px;
 }
 
 /* Estilos para mobile */
 @media (max-width: 768px) {
   .content-limited-width {
-    max-width: 95%; 
-    padding: 0 10px; 
-    }
+    max-width: 95%;
+    padding: 0 10px;
+  }
 }
+
+
+/* Estilo básico para el espacio en blanco */
+.espacio-en-blanco {
+  height: 30px;
+  width: 100%;
+}
+
 
 
 
@@ -134,10 +143,11 @@ Estilos header para la home y para el componenete header
 
 
 @media (max-width: 767px) {
-.header,
-.header-container-home {
-  width: 100%;
-}
+
+  .header,
+  .header-container-home {
+    width: 100%;
+  }
 }
 
 /* Estilos para la sección del logo */
@@ -302,8 +312,8 @@ Estilos header para la home y para el componenete header
     z-index: 2000;
     padding: 10px 0;
     width: 210px;
-     }
   }
+}
 
 @media (max-width: 767px) {
   .menu-toggle {
@@ -775,7 +785,7 @@ Estilo contenido home
   padding: 20px;
   border-radius: 20px;
   width: 80%;
-  margin: 0 auto; 
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -849,6 +859,7 @@ Estilo flecha arriba y flecha abajo home
 
 /* Animación de rebote para la flecha para bajar*/
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -999,9 +1010,9 @@ Imagen gif dentro de texto título
 
   div.explora-page h1 {
     font-size: 2.4em;
-    text-shadow: 
-      2px 2px 4px rgba(255, 255, 255, 1), 
-      -2px -2px 4px rgba(255, 255, 255, 1), 
+    text-shadow:
+      2px 2px 4px rgba(255, 255, 255, 1),
+      -2px -2px 4px rgba(255, 255, 255, 1),
       2px -2px 4px rgba(255, 255, 255, 1),
       -2px 2px 4px rgba(255, 255, 255, 1);
   }
@@ -1038,9 +1049,9 @@ Imagen gif dentro de texto título
 
   div.explora-page h1 {
     font-size: 1.5em;
-    text-shadow: 
-      2px 2px 4px rgba(255, 255, 255, 1), 
-      -2px -2px 4px rgba(255, 255, 255, 1), 
+    text-shadow:
+      2px 2px 4px rgba(255, 255, 255, 1),
+      -2px -2px 4px rgba(255, 255, 255, 1),
       2px -2px 4px rgba(255, 255, 255, 1),
       -2px 2px 4px rgba(255, 255, 255, 1);
   }
@@ -1118,7 +1129,7 @@ Estilos para los botones de línias
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   color: #CD2E3A;
   background-color: #FFFFFF;
   border: 1px solid transparent;
@@ -1126,7 +1137,7 @@ Estilos para los botones de línias
   z-index: 1;
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 1px;
-  margin: 2% 1% 4% 1%;
+  margin: 4% 1% 4% 1%;
 }
 
 
@@ -1223,10 +1234,10 @@ Estilos vídeo página explora
 
 .video-container {
   position: relative;
-  width: 100%; 
-  max-width: 800px; 
-  padding-bottom: 56.25%; 
-  margin: 20px auto; 
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 56.25%;
+  margin: 20px auto;
 }
 
 .video-container iframe {
@@ -1259,7 +1270,7 @@ Página detalle lugares de interés
   flex-direction: column;
   align-items: center;
   width: 90%;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 
@@ -1291,7 +1302,7 @@ Página detalle lugares de interés
 
 /* Media query para tablet horizontal (768px) e inferiores */
 @media (max-width: 767px) {
-  div.lugares-page  {
+  div.lugares-page {
     background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-mob.webp");
     background-size: cover;
     background-position: center;
@@ -1352,7 +1363,7 @@ Página detalle cultura pop
 
 /* Media query para tablet horizontal (768px) e inferiores */
 @media (max-width: 767px) {
-  div.cultura-page  {
+  div.cultura-page {
     background-image: url("../img/cultura-pop-seul-portada-mob.webp");
     background-size: cover;
     background-position: center;
@@ -1368,11 +1379,13 @@ Página detalle cultura pop
     justify-content: center;
     margin-top: 15%;
   }
-  
+
 }
 
 
-
+h2.text-red {
+  color: #CD2E3A;
+}
 
 
 
