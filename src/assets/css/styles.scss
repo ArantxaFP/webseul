@@ -2,364 +2,365 @@
 Estilos generales fuentes
 **********************************************/
 html {
-    font-size: 18px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
   }
-  
-  @media (max-width: 768px) {
-    html {
-      font-size: 16px;
-    }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
   }
-  
-  @media (max-width: 480px) {
-    html {
-      font-size: 14px;
-    }
-  }
-  
-  h1 {
-    color: #CD2E3A;
-    font-family: cursive;
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    padding-top: 4%;
-  }
-  
-  h3 {
-    font-size: 1.6rem;
-    font-weight: 600;
-  }
-  
-  h4 {
-    font-size: 1.4rem;
-    color: #333;
-  }
-  
-  a {
-    color: #0F64CD;
-    text-decoration: none;
-    font-family: 'Montserrat';
-  }
-  
-  a :hover {
-    color: #CD2E3A;
-    text-decoration: none;
-  }
-  
-  p {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    line-height: 150%;
-  }
-  
-  /********************************************
+}
+
+h1 {
+  color: #CD2E3A;
+  font-family: cursive;
+  font-size: 3rem;
+  padding: 1px 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-top: 4%;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+a {
+  color: #0F64CD;
+  text-decoration: none;
+  font-family: 'Montserrat';
+}
+
+a :hover {
+  color: #CD2E3A;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 150%;
+}
+
+/********************************************
   Estilos contenedores
   **********************************************/
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    background: white;
-    overflow-x: hidden;
-  }
-  
-  /* Estilos para el main */
-  main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-  
-  
-  .container {
-    margin: 0 auto;
-  }
-  
-  
-  /* Estilos para contenedores más estrechos en desktop */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background: white;
+  overflow-x: hidden;
+}
+
+/* Estilos para el main */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+
+.container {
+  margin: 0 auto;
+}
+
+
+/* Estilos para contenedores más estrechos en desktop */
+.content-limited-width {
+  max-width: 800px;
+  margin: 0 auto 3% auto;
+  padding: 0 20px;
+}
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
   .content-limited-width {
-    max-width: 800px;
-    margin: 0 auto 3% auto;
-    padding: 0 20px;
+    max-width: 95%;
+    padding: 0 10px;
   }
-  
-  /* Estilos para mobile */
-  @media (max-width: 768px) {
-    .content-limited-width {
-      max-width: 95%;
-      padding: 0 10px;
-    }
-  }
-  
-  
-  /* Estilo básico para el espacio en blanco */
-  .espacio-en-blanco {
-    height: 30px;
-    width: 100%;
-  }
-  
-  
-  
-  
-  /********************************************
+}
+
+
+/* Estilo básico para el espacio en blanco */
+.espacio-en-blanco {
+  height: 30px;
+  width: 100%;
+}
+
+
+
+
+/********************************************
   Estilos header para la home y para el componenete header
   **********************************************/
-  
-  /* Contenedor principal del header */
+
+/* Contenedor principal del header */
+.header,
+.header-container-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: rgba(255, 255, 255, 0.70);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 767px) {
+
   .header,
   .header-container-home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-    background-color: rgba(255, 255, 255, 0.70);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
-    overflow-x: hidden;
   }
-  
-  
-  @media (max-width: 767px) {
-  
-    .header,
-    .header-container-home {
-      width: 100%;
-    }
-  }
-  
-  /* Estilos para la sección del logo */
-  .logo-header,
-  .logo-header-home {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-header .logo,
-  .logo-header-home img {
-    max-height: 50px;
-    margin-right: 10px;
-    max-width: 60%;
-  }
-  
-  .header-title,
-  .header-title-home {
-    font-size: 1.2rem;
-    color: #333;
-    font-family: cursive;
-    margin: 0;
-  }
-  
-  /* Estilos del menú de navegación */
-  #main-menu,
-  #main-menu-home {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    /* overflow-x: hidden; */
-  }
-  
-  #main-menu ul li,
-  #main-menu-home ul li {
-    margin-right: 10px;
-  }
-  
-  #main-menu ul li a,
-  #main-menu-home ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-  }
-  
-  #main-menu ul li a:hover,
-  #main-menu-home ul li a:hover {
-    color: #0F64CD;
-  }
-  
-  #main-menu ul li a.current,
-  #main-menu-home ul li a.current {
-    color: #CD2E3A;
-  }
-  
-  
-  /* Estilos para el menú desplegable */
-  #main-menu-home ul li.dropdown {
-    position: relative;
-  }
-  
-  
-  
-  #main-menu-home ul li.dropdown:hover .submenu {
-    display: block;
-  }
-  
-  #main-menu-home ul li .submenu li {
-    padding: 10px 5px;
-  }
-  
-  #main-menu-home ul li .submenu li a:hover {
-    background-color: #ddd;
-  }
-  
-  .submenu {
+}
+
+/* Estilos para la sección del logo */
+.logo-header,
+.logo-header-home {
+  display: flex;
+  align-items: center;
+}
+
+.logo-header .logo,
+.logo-header-home img {
+  max-height: 50px;
+  margin-right: 10px;
+  max-width: 60%;
+}
+
+.header-title,
+.header-title-home {
+  font-size: 1.2rem;
+  color: #333;
+  font-family: cursive;
+  margin: 0;
+}
+
+/* Estilos del menú de navegación */
+#main-menu,
+#main-menu-home {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  /* overflow-x: hidden; */
+}
+
+#main-menu ul li,
+#main-menu-home ul li {
+  margin-right: 10px;
+}
+
+#main-menu ul li a,
+#main-menu-home ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+#main-menu ul li a:hover,
+#main-menu-home ul li a:hover {
+  color: #0F64CD;
+}
+
+#main-menu ul li a.current,
+#main-menu-home ul li a.current {
+  color: #CD2E3A;
+}
+
+
+/* Estilos para el menú desplegable */
+#main-menu-home ul li.dropdown {
+  position: relative;
+}
+
+
+
+#main-menu-home ul li.dropdown:hover .submenu {
+  display: block;
+}
+
+#main-menu-home ul li .submenu li {
+  padding: 10px 5px;
+}
+
+#main-menu-home ul li .submenu li a:hover {
+  background-color: #ddd;
+}
+
+.submenu {
+  display: none;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+}
+
+.submenu.visible {
+  display: block;
+}
+
+.header {
+  overflow: visible;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+
+/* Ubicación del submenú */
+
+#main-menu-home ul li.dropdown {
+  position: relative;
+}
+
+.header-container-home {
+  overflow: visible;
+  height: auto;
+}
+
+
+/* Estilos para los botones del menú */
+.menu-toggle,
+.close-btn {
+  display: none;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 15px;
+  z-index: 1003;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1004;
+}
+
+/* Media queries para tablet y móvil */
+@media (min-width: 768px) {
+  .menu-toggle {
     display: none;
+  }
+
+  header nav ul {
+    display: flex;
+  }
+
+  #main-menu ul,
+  #main-menu-home ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    align-items: center;
+  }
+
+  #main-menu-home ul li .submenu {
+    display: none;
+    position: absolute;
     top: 100%;
     left: 0;
     background-color: #f9f9f9;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 2000;
+    padding: 10px 0;
+    width: 210px;
   }
-  
-  .submenu.visible {
-    display: block;
-  }
-  
-  .header {
-    overflow: visible;
-  }
-  
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  
-  /* Ubicación del submenú */
-  
-  #main-menu-home ul li.dropdown {
-    position: relative;
-  }
-  
-  .header-container-home {
-    overflow: visible;
-    height: auto;
-  }
-  
-  
-  /* Estilos para los botones del menú */
-  .menu-toggle,
-  .close-btn {
-    display: none;
-  }
-  
+}
+
+@media (max-width: 767px) {
   .menu-toggle {
-    cursor: pointer;
     display: block;
-    position: absolute;
-    top: 15px;
-    z-index: 1003;
+    right: 50px;
   }
-  
-  .close-btn {
-    position: absolute;
-    top: 15px;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
+
+  #main-menu ul,
+  #main-menu-home ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    background-color: white;
     color: #333;
-    z-index: 1004;
+    transform: translateX(100%);
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
   }
-  
-  /* Media queries para tablet y móvil */
-  @media (min-width: 768px) {
-    .menu-toggle {
-      display: none;
-    }
-  
-    header nav ul {
-      display: flex;
-    }
-  
-    #main-menu ul,
-    #main-menu-home ul {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 5px;
-      align-items: center;
-    }
-  
-    #main-menu-home ul li .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f9f9f9;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 2000;
-      padding: 10px 0;
-      width: 210px;
-    }
+
+  header nav ul.is-visible {
+    display: flex;
+    transform: translateX(0);
   }
-  
-  @media (max-width: 767px) {
-    .menu-toggle {
-      display: block;
-      right: 50px;
-    }
-  
-    #main-menu ul,
-    #main-menu-home ul {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: left;
-    }
-  
-    header nav ul {
-      display: none;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 75%;
-      height: 100%;
-      background-color: white;
-      color: #333;
-      transform: translateX(100%);
-      overflow-x: hidden;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-      box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    }
-  
-    header nav ul.is-visible {
-      display: flex;
-      transform: translateX(0);
-    }
-  
-    .close-btn {
-      display: block;
-    }
-  
-    header nav ul li a.current {
-      color: #CD2E3A;
-    }
-  
-    /* AJUSTAR Estilos para los submenús en móviles
+
+  .close-btn {
+    display: block;
+  }
+
+  header nav ul li a.current {
+    color: #CD2E3A;
+  }
+
+  /* AJUSTAR Estilos para los submenús en móviles
     .submenu {
       display: block;
       flex-direction: column;
@@ -371,1194 +372,1236 @@ html {
     .dropdown:focus-within .submenu {
       display: flex;
     } */
-  }
-  
-  
-  /* Estilos para la imagen dentro del contenedor */
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow-x: hidden;
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  
-  /* Estilos para la imagen dentro del contenedor */
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  
-  /********************************************
+}
+
+
+/* Estilos para la imagen dentro del contenedor */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* Estilos para la imagen dentro del contenedor */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/********************************************
   Estilos para el footer incluyendo la línea separadora que tiene transición de color
   **********************************************/
-  
+
+.footer {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 160px;
+  overflow: hidden;
+  background-color: white;
+  color: #333;
+  text-align: left;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #CD2E3A, #0F64CD, #CD2E3A);
+  background-size: 200% 100%;
+  animation: shiftGradient 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes shiftGradient {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.footer ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+footer nav ul li a:hover {
+  color: #0F64CD;
+}
+
+footer nav ul li a.current {
+  color: #CD2E3A;
+}
+
+.logo-footer a img {
+  width: 20%;
+  transition: filter 0.5s;
+}
+
+.logo-footer a:hover img {
+  filter: brightness(0.8) sepia(1) hue-rotate(-50deg);
+}
+
+@media (min-width: 769px) {
+  .contact div {
+    margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 768px) {
   .footer {
-    position: relative;
     padding-top: 10px;
-    padding-bottom: 160px;
-    overflow: hidden;
-    background-color: white;
-    color: #333;
-    text-align: left;
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
+    margin-bottom: 15px;
+    text-align: center;
   }
-  
-  
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(to right, #CD2E3A, #0F64CD, #CD2E3A);
-    background-size: 200% 100%;
-    animation: shiftGradient 3s linear infinite;
-    z-index: -1;
-  }
-  
-  @keyframes shiftGradient {
-    0% {
-      background-position: 200% 0;
-    }
-  
-    100% {
-      background-position: -200% 0;
-    }
-  }
-  
+
   .footer .container {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
   }
-  
-  .footer p {
-    font-size: 0.8rem;
+
+  .footer nav,
+  .footer div {
+    width: 100%;
+    margin-bottom: 10px;
   }
-  
-  .footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.8rem;
-  }
-  
-  .footer ul li a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  
-  footer nav ul li a:hover {
-    color: #0F64CD;
-  }
-  
-  footer nav ul li a.current {
-    color: #CD2E3A;
-  }
-  
-  .logo-footer a img {
-    width: 20%;
-    transition: filter 0.5s;
-  }
-  
-  .logo-footer a:hover img {
-    filter: brightness(0.8) sepia(1) hue-rotate(-50deg);
-  }
-  
-  @media (min-width: 769px) {
-    .contact div {
-      margin-bottom: 2%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      padding-top: 10px;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-  
-    .footer .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer nav,
-    .footer div {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-  
-  
-  /*********************************************
+}
+
+
+/*********************************************
   Animación skyline prefooter home
   **********************************************/
-  
+
+#contenedor-texto-skyline {
+  position: relative;
+  width: 90%;
+  margin: 1px auto 0px;
+  background-color: white;
+}
+
+#skyline {
+  width: 19%;
+  top: 1px;
+  animation: desplazamiento 80s linear infinite;
+}
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(200px);
+  }
+
+  50% {
+    transform: translateX(500px);
+  }
+
+  75% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+@media (max-width: 767px) {
   #contenedor-texto-skyline {
-    position: relative;
-    width: 90%;
-    margin: 1px auto 0px;
-    background-color: white;
+    display: none;
   }
-  
-  #skyline {
-    width: 19%;
-    top: 1px;
-    animation: desplazamiento 80s linear infinite;
-  }
-  
-  @keyframes desplazamiento {
-    0% {
-      transform: translateX(0);
-    }
-  
-    25% {
-      transform: translateX(200px);
-    }
-  
-    50% {
-      transform: translateX(500px);
-    }
-  
-    75% {
-      transform: translateX(200px);
-    }
-  
-    100% {
-      transform: translateX(0px);
-    }
-  }
-  
-  
-  @media (max-width: 767px) {
-    #contenedor-texto-skyline {
-      display: none;
-    }
-  }
-  
-  /********************************************
+}
+
+/********************************************
   Estilos para la página home
   **********************************************/
-  
-  body.home-page {
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: #fff;
-  }
-  
-  .home-page body {
-    margin: 0px;
-    overflow: hidden;
-  }
-  
-  
-  
-  /********************************************
+
+body.home-page {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+}
+
+.home-page body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+
+
+/********************************************
   Imagen gif dentro de texto título header home
   **********************************************/
-  
-  
-  .clipped-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: transparent;
-    background-image: url("../img/tumblr_cbead511b250a0328f59d26a2febf727_fee8d347_500.gif");
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  
-  
-  /* Media query para tablet horizontal (768px) y mayores */
-  @media (min-width: 768px) {
-    div.home-page {
-      background-image: url("../img/header_home_ciudad_seul_noche_desk.webp");
-      padding: 0 0;
-      font-size: 2.5rem;
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    div.home-page h1 {
-      font-size: 2.4em;
-    }
-  
-    .text-container {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-  }
-  
-  
-  /* Media query para tablet horizontal (768px) e inferiores */
-  @media (max-width: 767px) {
-    div.home-page {
-      background-image: url("../img/header_home_ciudad_seul_noche_mob.webp");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-shadow: 2px 1px 1px rgba(255, 255, 255, 0.8);
-      font-size: 1.5em;
-      text-align: center;
-      width: 100%;
-      padding: 35% 2%;
-      box-sizing: border-box;
-      min-height: 10vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 15%;
-    }
-  
-    div.home-page h1 {
-      font-size: 1.5em;
-      margin: 10px;
-    }
-  
-    .text-container {
-      position: relative;
-      width: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40vh;
-    }
-  
-    .clipped-text {
-      font-size: 20vw;
-    }
-  }
-  
-  .highlight {
-    color: #0F64CD;
-    background-image: inherit;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: #0F64CD;
-  }
-  
-  
-  
-  /*********************************************
-  Estilo contenido home
-  **********************************************/
-  .container-info {
-    margin-top: 15%;
-    margin-bottom: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80%;
-    text-align: center;
-  
-  }
-  
-  .container-info section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  
-  #intro-home {
-    padding-top: 3%;
-    padding-bottom: 3%;
-  
-  }
-  
-  
-  
-  /* Estilo general para las filas */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-    margin: 20px 0;
-  }
-  
-  /* Columnas de imagen y texto */
-  .image-column,
-  .text-column {
-    padding: 20px;
-  }
-  
-  .image-column {
-    flex: 2;
-    /* Ocupa 2/3 en escritorio */
-  }
-  
-  .text-column {
-    flex: 1;
-    /* Ocupa 1/3 en escritorio */
-  }
-  
-  .image-column img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  /* Estilos específicos para la sección de accesos */
-  .links-row {
-    flex-direction: row;
-  }
-  
-  .links-row .text-column {
-    flex: 1;
-    text-align: center;
-  }
-  
-  /* Estilos para móviles */
-  @media (max-width: 768px) {
-    .row {
-      flex-direction: column;
-      padding: 10px;
-    }
-  
-    /* Asegura que orden mobile img + txt */
-    .image-column {
-      order: -1;
-      width: 90%;
-    }
-  
-    .text-column {
-      order: 1;
-      width: 90%;
-    }
-  
-    .links-row {
-      flex-direction: column;
-    }
-  }
-  
-  
-  
-  .icon-container {
-    display: flex;
-    gap: 20px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 20px;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: center;
-  }
-  
-  .text-column {
-    text-align: center;
-  }
-  
-  .icon-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: blue;
-    transition: color 0.3s ease;
-  }
-  
-  .icon-link svg {
-    fill: currentColor;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .icon-link:hover {
-    color: red;
-  }
-  
-  
-  
-  
-  /********************************************
-  Imagen interior home
-  **********************************************/
-  
-  .image-container-namsan {
-    width: 100%;
-    height: 700px;
-    background-image: url("../img/seul_contrastes_arquitectonicos_desk.webp");
+
+
+.clipped-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: transparent;
+  background-image: url("../img/tumblr_cbead511b250a0328f59d26a2febf727_fee8d347_500.gif");
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  div.home-page {
+    background-image: url("../img/header_home_ciudad_seul_noche_desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
     background-size: cover;
     background-position: center;
-  }
-  
-  /* Reglas para móviles */
-  @media (max-width: 767px) {
-    .image-container-namsan {
-      background-image: url("../img/seul_contrastes_arquitectonicos_mob.webp");
-      height: 200px;
-  
-    }
-  }
-  
-  
-  /*********************************************
-  Estilo flecha arriba y flecha abajo home
-  **********************************************/
-  
-  /* Estilos para la flecha hacia abajo */
-  .scroll-down-arrow {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    animation: bounce 4s infinite;
-  }
-  
-  .scroll-down-arrow img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Animación de rebote para la flecha para bajar*/
-  @keyframes bounce {
-  
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateX(-50%) translateY(0);
-    }
-  
-    40% {
-      transform: translateX(-50%) translateY(-10px);
-    }
-  
-    60% {
-      transform: translateX(-50%) translateY(-5px);
-    }
-  }
-  
-  /* Media query para tablet horizontal (768px) e inferiores */
-  @media (max-width: 767px) {
-    .scroll-down-arrow {
-      display: none;
-    }
-  
-    .scroll-down-arrow img {
-      display: none;
-    }
-  }
-  
-  
-  /* Estilos para el botón de scroll hacia arriba */
-  .scroll-top svg {
-    fill: #CD2E3A;
-    cursor: pointer;
-  }
-  
-  
-  
-  /*********************************************
-  Estilo cita prefooter home
-  **********************************************/
-  
-  /* Estilos para el contenedor que envuelve el blockquote y h4 */
-  .centrado-blockquote {
-    border-left: 5px solid #CD2E3A;
-    background-color: #f9f9f9;
-    padding: 2% 4%;
-    margin: 6% 6% 1% 6%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo general para blockquote */
-  .centrado-blockquote blockquote {
-    font-family: 'Georgia', serif;
-    font-size: 1.8rem;
-    font-style: italic;
-    color: #333;
-    padding: 0;
-    margin: 0;
-    line-height: 1.6;
-    position: relative;
-  }
-  
-  /* Añado comillas decorativas usando pseudo-elementos */
-  .centrado-blockquote blockquote:before {
-    content: open-quote;
-    font-size: 3rem;
-    color: #CD2E3A;
-    line-height: 0.1rem;
-    margin-right: 10px;
-    vertical-align: -0.4rem;
-  }
-  
-  .centrado-blockquote blockquote:after {
-    content: close-quote;
-    font-size: 3rem;
-    color: #CD2E3A;
-    line-height: 0.1rem;
-    margin-left: 5px;
-    vertical-align: -0.4rem;
-  }
-  
-  /* Estilo para el h4 dentro del contenedor */
-  .centrado-blockquote h4 {
-    font-size: 1rem;
-    font-style: normal;
-    color: #333;
-    margin: 10px 0 0 0;
-  }
-  
-  /* Ajuste para dispositivos móviles */
-  @media (max-width: 768px) {
-    .centrado-blockquote {
-      padding: 15px;
-      margin: 2%;
-    }
-  
-    .centrado-blockquote blockquote {
-      font-size: 1.6rem;
-    }
-  
-    .centrado-blockquote h4 {
-      font-size: 0.9rem;
-    }
-  }
-  
-  
-  
-  /********************************************
-  Estilos específicos para la página de explora seúl
-  **********************************************/
-  
-  .miembros-page body {
-    background-color: #fff;
-  }
-  
-  /********************************************
-  Imagen gif dentro de texto título
-  **********************************************/
-  
-  .clipped-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: transparent;
-    background-image: url("../img/tumblr_cbead511b250a0328f59d26a2febf727_fee8d347_500.gif");
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  /* Media query para tablet horizontal (768px) y mayores */
-  @media (min-width: 768px) {
-    div.explora-page {
-      background-image: url("../img/header_explora_seul_amanecer_desk.webp");
-      padding: 0 0;
-      font-size: 2.5rem;
-      background-size: cover;
-      background-position: center;
-      color: #0F64CD;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    div.explora-page h1 {
-      font-size: 2.4em;
-      text-shadow:
-        2px 2px 4px rgba(255, 255, 255, 1),
-        -2px -2px 4px rgba(255, 255, 255, 1),
-        2px -2px 4px rgba(255, 255, 255, 1),
-        -2px 2px 4px rgba(255, 255, 255, 1);
-    }
-  
-    .text-container {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-  }
-  
-  /* Media query para tablet horizontal (768px) e inferiores */
-  @media (max-width: 767px) {
-    div.explora-page {
-      background-image: url("../img/header_explora_seul_amanecer_mob.webp");
-      background-size: cover;
-      background-position: center;
-      color: #0F64CD;
-      font-size: 1.5em;
-      text-align: center;
-      width: 100%;
-      padding: 35% 2%;
-      box-sizing: border-box;
-      min-height: 10vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 15%;
-    }
-  
-  
-    div.explora-page h1 {
-      font-size: 1.5em;
-      text-shadow:
-        2px 2px 4px rgba(255, 255, 255, 1),
-        -2px -2px 4px rgba(255, 255, 255, 1),
-        2px -2px 4px rgba(255, 255, 255, 1),
-        -2px 2px 4px rgba(255, 255, 255, 1);
-    }
-  
-    .text-container {
-      position: relative;
-      width: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40vh;
-    }
-  
-    .clipped-text {
-      font-size: 20vw;
-    }
-  }
-  
-  
-  
-  
-  
-  /********************************************
-  Estilos para el listado de explora
-  **********************************************/
-  
-  .explora-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .explora {
-    width: calc(50% - 40px);
-    margin: 20px;
-    padding: 10px;
-    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
     text-align: center;
-  }
-  
-  
-  /* Para móviles: 1 elemento por fila */
-  @media (max-width: 768px) {
-    .explora {
-      width: 100%;
-      margin: 10px 0;
-    }
-  
-  
-    .explora img {
-      width: 98%;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-  
-  }
-  
-  
-  /********************************************
-  Estilos para los botones de línias
-  **********************************************/
-  
-  .seul-button {
-    position: relative;
-    padding: 15px 25px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #CD2E3A;
-    background-color: #FFFFFF;
-    border: 1px solid transparent;
-    transition: all .3s;
-    z-index: 1;
-    font-family: 'Josefin Sans', sans-serif;
-    letter-spacing: 1px;
-    margin: 4% 1% 4% 1%;
-  }
-  
-  
-  .seul-button:before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    right: -10px;
-    top: 0;
-    bottom: 0;
-    border: 1px solid #CD2E3A;
-    transition: all .3s;
-    z-index: -1;
-  }
-  
-  .seul-button:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10px;
-    bottom: -10px;
-    border: 1px solid #CD2E3A;
-    transition: all .3s;
-    z-index: -2;
-  }
-  
-  .seul-button:hover {
-    color: #CD2E3A;
-  }
-  
-  .seul-button:hover:before {
-    top: -10px;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    border-width: 0;
-  }
-  
-  .seul-button:hover:after {
-    top: 0;
-    bottom: 0;
-    left: -10px;
-    right: -10px;
-    border-width: 1px;
-  }
-  
-  @media (max-width: 767px) {
-    .seul-button {
-      position: relative;
-      padding: 5px 15px;
-      font-size: 0.8rem;
-      line-height: 1;
-      margin: 1% 1% 1% 1%;
-    }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /********************************************
-  Estilos para el hover de la img de explora 
-  **********************************************/
-  /* Contenedor de la imagen */
-  .image-container {
-    position: relative;
     width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  
-  /* Imagen */
-  .image-container img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  
-  /* Superposición con el gradiente */
-  .image-container .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(205, 46, 58, 0.5) 0%, rgba(15, 100, 205, 0.5) 100%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  /* Efecto de hover para la imagen */
-  .image-container:hover img {
-    transform: scale(1.1);
-  }
-  
-  /* Efecto de hover para la superposición */
-  .image-container:hover .overlay {
-    opacity: 0.4;
-  }
-  
-  
-  
-  /********************************************
-  Estilos vídeo página explora 
-  **********************************************/
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    padding-bottom: 56.25%;
-    margin: 20px auto;
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  
-  /********************************************
-  Estilos específicos para las páginas detalle 
-  **********************************************/
-  
-  /********************************************
-  Página detalle lugares de interés 
-  **********************************************/
-  
-  
-  .lugares-page {
-    display: block;
-    width: 90%;
-    height: auto;
-    margin: auto;
-  }
-  
-  .centrado {
+    box-sizing: border-box;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    justify-content: center;
   }
-  
-  
-  .centrado article {
-    width: 80%;
-    margin: 0 auto;
+
+  div.home-page h1 {
+    font-size: 2.4em;
   }
-  
-  
-  @media (max-width: 767px) {
-    .lugares-page {
-      width: 96%;
-    }
-  
-    .centrado {
-      width: 98%;
-    }
-  
-    .centrado article {
-      width: 98%;
-    }
-  }
-  
-  
-  /* Media query para tablet horizontal (768px) y mayores */
-  @media (min-width: 768px) {
-    div.lugares-page {
-      background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-desk.webp");
-      padding: 0 0;
-      font-size: 2.5rem;
-      background-size: cover;
-      background-position: center;
-      color: #0F64CD;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-  }
-  
-  /* Media query para tablet horizontal (768px) e inferiores */
-  @media (max-width: 767px) {
-    div.lugares-page {
-      background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-mob.webp");
-      background-size: cover;
-      background-position: center;
-      color: #0F64CD;
-      font-size: 1.5em;
-      text-align: center;
-      width: 100%;
-      padding: 35% 2%;
-      box-sizing: border-box;
-      min-height: 10vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 15%;
-    }
-  
-  }
-  
-  
-  
-  /* Estilos generales para .content-list */
-  .content-list {
+
+  .text-container {
+    position: relative;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
-  
-  /* Estilos para la versión de escritorio */
-  @media (min-width: 768px) {
-    .content-list {
-      flex-direction: row;
-      max-width: 90%;
-      gap: 20px;
-      margin: 5px auto;
-    }
-  
-    .content-list .image-column {
-      width: 70%;
-    }
-  
-    .content-list .text-column {
-      width: 30%;
-    }
-  
-    .content-list .image-column img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+}
+
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  div.home-page {
+    background-image: url("../img/header_home_ciudad_seul_noche_mob.webp");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 2px 1px 1px rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 35% 2%;
+    box-sizing: border-box;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
   }
-  
-  /* Estilos para la versión móvil */
-  @media (max-width: 767px) {
-    .content-list {
-      flex-direction: column;
-      width: 98%;
-    }
-  
-    .content-list .image-column,
-    .content-list .text-column {
-      width: 98%;
-      text-align: center;
-    }
-  
-    .content-list .image-column img {
-      width: 98%;
-      height: auto;
-      border-radius: 8px;
-    }
+
+  div.home-page h1 {
+    font-size: 1.5em;
+    margin: 10px;
   }
-  
-  
-  /********************************************
-  Página detalle cultura pop
+
+  .text-container {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
+
+  .clipped-text {
+    font-size: 20vw;
+  }
+}
+
+.highlight {
+  color: #0F64CD;
+  background-image: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #0F64CD;
+}
+
+
+
+/*********************************************
+  Estilo contenido home
   **********************************************/
-  
-  
-  .cultura-page {
+.container-info {
+  margin-top: 15%;
+  margin-bottom: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  text-align: center;
+
+}
+
+.container-info section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+#intro-home {
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+}
+
+
+
+/* Estilo general para las filas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Columnas de imagen y texto */
+.image-column,
+.text-column {
+  padding: 20px;
+}
+
+.image-column {
+  flex: 2;
+  /* Ocupa 2/3 en escritorio */
+}
+
+.text-column {
+  flex: 1;
+  /* Ocupa 1/3 en escritorio */
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Estilos específicos para la sección de accesos */
+.links-row {
+  flex-direction: row;
+}
+
+.links-row .text-column {
+  flex: 1;
+  text-align: center;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Asegura que orden mobile img + txt */
+  .image-column {
+    order: -1;
+    width: 90%;
+  }
+
+  .text-column {
+    order: 1;
+    width: 90%;
+  }
+
+  .links-row {
+    flex-direction: column;
+  }
+}
+
+
+
+.icon-container {
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.text-column {
+  text-align: center;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+.icon-link svg {
+  fill: currentColor;
+  width: 60px;
+  height: 60px;
+}
+
+.icon-link:hover {
+  color: red;
+}
+
+
+
+
+/********************************************
+  Imagen interior home
+  **********************************************/
+
+.image-container-namsan {
+  width: 100%;
+  height: 700px;
+  background-image: url("../img/seul_contrastes_arquitectonicos_desk.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Reglas para móviles */
+@media (max-width: 767px) {
+  .image-container-namsan {
+    background-image: url("../img/seul_contrastes_arquitectonicos_mob.webp");
+    height: 200px;
+
+  }
+}
+
+
+/*********************************************
+  Estilo flecha arriba y flecha abajo home
+  **********************************************/
+
+/* Estilos para la flecha hacia abajo */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  animation: bounce 4s infinite;
+}
+
+.scroll-down-arrow img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animación de rebote para la flecha para bajar*/
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  .scroll-down-arrow {
+    display: none;
+  }
+
+  .scroll-down-arrow img {
+    display: none;
+  }
+}
+
+
+/* Estilos para el botón de scroll hacia arriba */
+.scroll-top svg {
+  fill: #CD2E3A;
+  cursor: pointer;
+}
+
+
+
+/*********************************************
+  Estilo cita prefooter home
+  **********************************************/
+
+/* Estilos para el contenedor que envuelve el blockquote y h4 */
+.centrado-blockquote {
+  border-left: 5px solid #CD2E3A;
+  background-color: #f9f9f9;
+  padding: 2% 4%;
+  margin: 6% 6% 1% 6%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general para blockquote */
+.centrado-blockquote blockquote {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Añado comillas decorativas usando pseudo-elementos */
+.centrado-blockquote blockquote:before {
+  content: open-quote;
+  font-size: 3rem;
+  color: #CD2E3A;
+  line-height: 0.1rem;
+  margin-right: 10px;
+  vertical-align: -0.4rem;
+}
+
+.centrado-blockquote blockquote:after {
+  content: close-quote;
+  font-size: 3rem;
+  color: #CD2E3A;
+  line-height: 0.1rem;
+  margin-left: 5px;
+  vertical-align: -0.4rem;
+}
+
+/* Estilo para el h4 dentro del contenedor */
+.centrado-blockquote h4 {
+  font-size: 1rem;
+  font-style: normal;
+  color: #333;
+  margin: 10px 0 0 0;
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  .centrado-blockquote {
+    padding: 15px;
+    margin: 2%;
+  }
+
+  .centrado-blockquote blockquote {
+    font-size: 1.6rem;
+  }
+
+  .centrado-blockquote h4 {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/********************************************
+  Estilos específicos para la página de explora seúl
+  **********************************************/
+
+.miembros-page body {
+  background-color: #fff;
+}
+
+/********************************************
+  Imagen gif dentro de texto título
+  **********************************************/
+
+.clipped-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: transparent;
+  background-image: url("../img/tumblr_cbead511b250a0328f59d26a2febf727_fee8d347_500.gif");
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  div.explora-page {
+    background-image: url("../img/header_explora_seul_amanecer_desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  div.explora-page h1 {
+    font-size: 2.4em;
+    text-shadow:
+      2px 2px 4px rgba(255, 255, 255, 1),
+      -2px -2px 4px rgba(255, 255, 255, 1),
+      2px -2px 4px rgba(255, 255, 255, 1),
+      -2px 2px 4px rgba(255, 255, 255, 1);
+  }
+
+  .text-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  div.explora-page {
+    background-image: url("../img/header_explora_seul_amanecer_mob.webp");
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 35% 2%;
+    box-sizing: border-box;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+
+  div.explora-page h1 {
+    font-size: 1.5em;
+    text-shadow:
+      2px 2px 4px rgba(255, 255, 255, 1),
+      -2px -2px 4px rgba(255, 255, 255, 1),
+      2px -2px 4px rgba(255, 255, 255, 1),
+      -2px 2px 4px rgba(255, 255, 255, 1);
+  }
+
+  .text-container {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
+
+  .clipped-text {
+    font-size: 20vw;
+  }
+}
+
+
+
+
+
+/********************************************
+  Estilos para el listado de explora
+  **********************************************/
+
+.explora-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.explora {
+  width: calc(50% - 40px);
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+/* Para móviles: 1 elemento por fila */
+@media (max-width: 768px) {
+  .explora {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+
+  .explora img {
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
     display: block;
+  }
+
+}
+
+
+/********************************************
+  Estilos para los botones de línias
+  **********************************************/
+
+.seul-button {
+  position: relative;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #CD2E3A;
+  background-color: #FFFFFF;
+  border: 1px solid transparent;
+  transition: all .3s;
+  z-index: 1;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 1px;
+  margin: 4% 1% 4% 1%;
+}
+
+
+.seul-button:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #CD2E3A;
+  transition: all .3s;
+  z-index: -1;
+}
+
+.seul-button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+  border: 1px solid #CD2E3A;
+  transition: all .3s;
+  z-index: -2;
+}
+
+.seul-button:hover {
+  color: #CD2E3A;
+}
+
+.seul-button:hover:before {
+  top: -10px;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  border-width: 0;
+}
+
+.seul-button:hover:after {
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  border-width: 1px;
+}
+
+@media (max-width: 767px) {
+  .seul-button {
+    position: relative;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin: 1% 1% 1% 1%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/********************************************
+  Estilos para el hover de la img de explora 
+  **********************************************/
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Imagen */
+.image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Superposición con el gradiente */
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(205, 46, 58, 0.5) 0%, rgba(15, 100, 205, 0.5) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Efecto de hover para la imagen */
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* Efecto de hover para la superposición */
+.image-container:hover .overlay {
+  opacity: 0.4;
+}
+
+
+
+/********************************************
+  Estilos vídeo página explora 
+  **********************************************/
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 56.25%;
+  margin: 20px auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/********************************************
+  Estilos específicos para las páginas detalle 
+  **********************************************/
+
+/********************************************
+  Página detalle lugares de interés 
+  **********************************************/
+
+
+.lugares-page {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.centrado article {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 767px) {
+  .lugares-page {
+    width: 96%;
+  }
+
+  .centrado {
+    width: 98%;
+  }
+
+  .centrado article {
+    width: 98%;
+  }
+}
+
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  div.lugares-page {
+    background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  div.lugares-page {
+    background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-mob.webp");
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 35% 2%;
+    box-sizing: border-box;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+}
+
+
+
+/* Estilos generales para .content-list */
+.content-list {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+/* Estilos para la versión de escritorio */
+@media (min-width: 768px) {
+  .content-list {
+    flex-direction: row;
+    max-width: 90%;
+    gap: 20px;
+    margin: 5px auto;
+  }
+
+  .content-list .image-column {
+    width: 70%;
+  }
+
+  .content-list .text-column {
+    width: 30%;
+  }
+
+  .content-list .image-column img {
     width: 100%;
     height: auto;
-    margin: auto;
+    border-radius: 8px;
   }
-  
-  
-  
-  /* Media query para tablet horizontal (768px) y mayores */
-  @media (min-width: 768px) {
-    div.cultura-page {
-      background-image: url("../img/cultura-pop-seul-portada-desk.webp");
-      padding: 0 0;
-      font-size: 2.5rem;
-      background-size: cover;
-      background-position: center;
-      color: #0F64CD;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
+}
+
+/* Estilos para la versión móvil */
+@media (max-width: 767px) {
+  .content-list {
+    flex-direction: column;
+    width: 98%;
   }
-  
-  /* Media query para tablet horizontal (768px) e inferiores */
-  @media (max-width: 767px) {
-    div.cultura-page {
-      background-image: url("../img/cultura-pop-seul-portada-mob.webp");
-      background-size: cover;
-      background-position: center;
-      color: #0F64CD;
-      font-size: 1.5em;
-      text-align: center;
-      width: 100%;
-      padding: 35% 2%;
-      box-sizing: border-box;
-      min-height: 10vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 15%;
-    }
-  
+
+  .content-list .image-column,
+  .content-list .text-column {
+    width: 98%;
+    text-align: center;
   }
-  
-  
-  h2.text-red {
-    color: #CD2E3A;
+
+  .content-list .image-column img {
+    width: 98%;
+    height: auto;
+    border-radius: 8px;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /********************************************
+}
+
+
+/********************************************
+Página detalle cultura pop
+**********************************************/
+
+
+.cultura-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+  div.cultura-page {
+    background-image: url("../img/cultura-pop-seul-portada-desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  div.cultura-page {
+    background-image: url("../img/cultura-pop-seul-portada-mob.webp");
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    padding: 35% 2%;
+    box-sizing: border-box;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+}
+
+
+h2.text-red {
+  color: #CD2E3A;
+}
+
+
+
+/********************************************
   Estilos página de enlaces
   **********************************************/
-  
-  section {
-    width: 70%;
-    margin-bottom: 40px;
-  }
-  
-  .links-page {
-    padding: 0;
-    text-align: left;
-    list-style-type: none;
-  }
-  
-  
-  
-  /********************************************
+
+section {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.links-page {
+  padding: 0;
+  text-align: left;
+  list-style-type: none;
+}
+
+
+
+/********************************************
   Estilos página de enlaces para enlaces subrayados
   **********************************************/
-  
-  .links-page li {
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo inicial del enlace */
-  a.link-destacado {
-    color: #0F64CD;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-    display: inline-block;
-  }
-  
-  /* Oscurecer el texto al hacer hover */
-  a.link-destacado:hover {
-    color: #0F64CD;
-  }
-  
-  /* Pseudo-elemento para la línea de subrayado */
-  a.link-destacado::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, #CD2E3A, #d54c58, #e37a83);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-  }
-  
-  /* Animación de subrayado en hover */
-  a.link-destacado:hover::after {
-    transform: scaleX(1);
-  }
-  
-  /* Mejora del grosor del subrayado y efecto de "bolígrafo" */
-  a.link-destacado::after {
-    border-radius: 2px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  
-  /********************************************
+
+.links-page li {
+  margin-bottom: 20px;
+}
+
+/* Estilo inicial del enlace */
+a.link-destacado {
+  color: #0F64CD;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+/* Oscurecer el texto al hacer hover */
+a.link-destacado:hover {
+  color: #0F64CD;
+}
+
+/* Pseudo-elemento para la línea de subrayado */
+a.link-destacado::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #CD2E3A, #d54c58, #e37a83);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+/* Animación de subrayado en hover */
+a.link-destacado:hover::after {
+  transform: scaleX(1);
+}
+
+/* Mejora del grosor del subrayado y efecto de "bolígrafo" */
+a.link-destacado::after {
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/********************************************
   Estilos para el botón de scroll top páginas interiores
   **********************************************/
-  .scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    transition: opacity 0.3s ease-in-out;
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-top:not(.hidden) {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+
+}
+
+
+/********************************************
+  Estilos específicos para la página presentación 
+**********************************************/
+.transition-button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #CD2E3A;
+  background-color: #FFFFFF;
+  border: 2px solid #CD2E3A;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.transition-button:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 2px;
+}
+
+.transition-button:hover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #CD2E3A, #0F64CD, #CD2E3A);
+  background-size: 200% 100%;
+  animation: gradientMove 8s linear infinite;
+  z-index: -1;
+}
+
+.button-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animación del gradiente */
+@keyframes gradientMove {
+  0% {
+    background-position: 200% 0;
   }
-  
-  .scroll-top:not(.hidden) {
-    display: block;
-    opacity: 1;
+
+  100% {
+    background-position: -200% 0;
   }
-  
-  .hidden {
-    display: none;
-  
-  }
+}
