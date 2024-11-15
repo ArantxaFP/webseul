@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             behavior: "smooth"
         });
     });
+    AOS.init();
 });
 
 //# sourceMappingURL=index.41b17edc.js.map
