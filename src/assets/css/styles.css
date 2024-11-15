@@ -1123,7 +1123,7 @@ Estilos para el listado de explora
 Estilos para los botones de línias
 **********************************************/
 
-#seul-button {
+.seul-button {
   position: relative;
   padding: 15px 25px;
   font-size: 1.2rem;
@@ -1141,7 +1141,7 @@ Estilos para los botones de línias
 }
 
 
-#seul-button:before {
+.seul-button:before {
   content: '';
   position: absolute;
   left: -10px;
@@ -1153,7 +1153,7 @@ Estilos para los botones de línias
   z-index: -1;
 }
 
-#seul-button:after {
+.seul-button:after {
   content: '';
   position: absolute;
   left: 0;
@@ -1165,11 +1165,11 @@ Estilos para los botones de línias
   z-index: -2;
 }
 
-#seul-button:hover {
+.seul-button:hover {
   color: #CD2E3A;
 }
 
-#seul-button:hover:before {
+.seul-button:hover:before {
   top: -10px;
   bottom: -10px;
   left: 0;
@@ -1177,13 +1177,31 @@ Estilos para los botones de línias
   border-width: 0;
 }
 
-#seul-button:hover:after {
+.seul-button:hover:after {
   top: 0;
   bottom: 0;
   left: -10px;
   right: -10px;
   border-width: 1px;
 }
+
+@media (max-width: 767px) {
+.seul-button {
+  position: relative;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+   line-height: 1;
+   margin: 1% 1% 1% 1%;
+}
+}
+
+
+
+
+
+
+
+
 
 
 /********************************************
