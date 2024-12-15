@@ -69,7 +69,7 @@ p {
 
 /********************************************
   Estilos contenedores
-  **********************************************/
+**********************************************/
 
 body {
   display: flex;
@@ -80,6 +80,13 @@ body {
   background: white;
   overflow-x: hidden;
 }
+
+@media (max-width: 768px) {
+body {
+  height: 95%;
+}
+}
+
 
 /* Estilos para el main */
 main {
@@ -210,7 +217,6 @@ main {
 }
 
 
-
 #main-menu-home ul li.dropdown:hover .submenu {
   display: block;
 }
@@ -240,14 +246,12 @@ main {
   overflow: visible;
 }
 
-
 .dropdown {
   position: relative;
 }
 
 
 /* Ubicación del submenú */
-
 #main-menu-home ul li.dropdown {
   position: relative;
 }
@@ -406,7 +410,7 @@ main {
 
 /********************************************
   Estilos para el footer incluyendo la línea separadora que tiene transición de color
-  **********************************************/
+**********************************************/
 
 .footer {
   position: relative;
@@ -517,7 +521,7 @@ footer nav ul li a.current {
 
 /*********************************************
   Animación skyline prefooter home
-  **********************************************/
+**********************************************/
 
 #contenedor-texto-skyline {
   position: relative;
@@ -563,7 +567,7 @@ footer nav ul li a.current {
 
 /********************************************
   Estilos para la página home
-  **********************************************/
+**********************************************/
 
 body.home-page {
   margin: 0px;
@@ -583,7 +587,7 @@ body.home-page {
 
 /********************************************
   Imagen gif dentro de texto título header home
-  **********************************************/
+**********************************************/
 
 
 .clipped-text {
@@ -596,8 +600,6 @@ body.home-page {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
 
 /* Media query para tablet horizontal (768px) y mayores */
 @media (min-width: 768px) {
@@ -684,7 +686,7 @@ body.home-page {
 
 /*********************************************
   Estilo contenido home
-  **********************************************/
+**********************************************/
 .container-info {
   margin-top: 15%;
   margin-bottom: 15%;
@@ -709,8 +711,6 @@ body.home-page {
   padding-bottom: 3%;
 
 }
-
-
 
 /* Estilo general para las filas */
 .row {
@@ -777,7 +777,6 @@ body.home-page {
 }
 
 
-
 .icon-container {
   display: flex;
   gap: 20px;
@@ -816,7 +815,7 @@ body.home-page {
 
 /********************************************
   Imagen interior home
-  **********************************************/
+**********************************************/
 
 .image-container-namsan {
   width: 100%;
@@ -838,7 +837,7 @@ body.home-page {
 
 /*********************************************
   Estilo flecha arriba y flecha abajo home
-  **********************************************/
+**********************************************/
 
 /* Estilos para la flecha hacia abajo */
 .scroll-down-arrow {
@@ -899,7 +898,7 @@ body.home-page {
 
 /*********************************************
   Estilo cita prefooter home
-  **********************************************/
+**********************************************/
 
 /* Estilos para el contenedor que envuelve el blockquote y h4 */
 .centrado-blockquote {
@@ -969,15 +968,11 @@ body.home-page {
 
 /********************************************
   Estilos específicos para la página de explora seúl
-  **********************************************/
-
-.miembros-page body {
-  background-color: #fff;
-}
+**********************************************/
 
 /********************************************
   Imagen gif dentro de texto título
-  **********************************************/
+**********************************************/
 
 .clipped-text {
   font-family: 'Montserrat', sans-serif;
@@ -1071,12 +1066,9 @@ body.home-page {
 }
 
 
-
-
-
 /********************************************
   Estilos para el listado de explora
-  **********************************************/
+**********************************************/
 
 .explora-list {
   display: flex;
@@ -1102,7 +1094,6 @@ body.home-page {
     margin: 10px 0;
   }
 
-
   .explora img {
     width: 98%;
     height: auto;
@@ -1115,7 +1106,7 @@ body.home-page {
 
 /********************************************
   Estilos para los botones de línias
-  **********************************************/
+**********************************************/
 
 .seul-button {
   position: relative;
@@ -1133,7 +1124,6 @@ body.home-page {
   letter-spacing: 1px;
   margin: 4% 1% 4% 1%;
 }
-
 
 .seul-button:before {
   content: '';
@@ -1190,17 +1180,10 @@ body.home-page {
 }
 
 
-
-
-
-
-
-
-
-
 /********************************************
   Estilos para el hover de la img de explora 
-  **********************************************/
+**********************************************/
+
 /* Contenedor de la imagen */
 .image-container {
   position: relative;
@@ -1242,7 +1225,7 @@ body.home-page {
 
 /********************************************
   Estilos vídeo página explora 
-  **********************************************/
+**********************************************/
 
 .video-container {
   position: relative;
@@ -1263,12 +1246,11 @@ body.home-page {
 
 /********************************************
   Estilos específicos para las páginas detalle 
-  **********************************************/
+**********************************************/
 
 /********************************************
   Página detalle lugares de interés 
-  **********************************************/
-
+**********************************************/
 
 .lugares-page {
   display: block;
@@ -1281,54 +1263,23 @@ body.home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
   margin: 0 auto;
 }
-
-
-.centrado article {
-  width: 80%;
-  margin: 0 auto;
-}
-
 
 @media (max-width: 767px) {
   .lugares-page {
-    width: 96%;
+    width: 98%;
   }
 
   .centrado {
-    width: 98%;
+    width: 100%;
   }
 
   .centrado article {
-    width: 98%;
-  }
-}
-
-
-/* Media query para tablet horizontal (768px) y mayores */
-@media (min-width: 768px) {
-  div.lugares-page {
-    background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-desk.webp");
-    padding: 0 0;
-    font-size: 2.5rem;
-    background-size: cover;
-    background-position: center;
-    color: #0F64CD;
-    text-align: center;
     width: 100%;
-    box-sizing: border-box;
-    min-height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 0 auto;
   }
 
-}
-
-/* Media query para tablet horizontal (768px) e inferiores */
-@media (max-width: 767px) {
   div.lugares-page {
     background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-mob.webp");
     background-size: cover;
@@ -1345,9 +1296,33 @@ body.home-page {
     justify-content: center;
     margin-top: 15%;
   }
-
 }
 
+
+/* Media query para tablet horizontal (768px) y mayores */
+@media (min-width: 768px) {
+
+  .centrado article {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  div.lugares-page {
+    background-image: url("../img/gwanghwamun-palacio-presentacion-lugares-desk.webp");
+    padding: 0 0;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color: #0F64CD;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 
 /* Estilos generales para .content-list */
@@ -1414,8 +1389,6 @@ Página detalle cultura pop
   margin: auto;
 }
 
-
-
 /* Media query para tablet horizontal (768px) y mayores */
 @media (min-width: 768px) {
   div.cultura-page {
@@ -1433,7 +1406,6 @@ Página detalle cultura pop
     flex-direction: column;
     justify-content: center;
   }
-
 }
 
 /* Media query para tablet horizontal (768px) e inferiores */
@@ -1454,9 +1426,7 @@ Página detalle cultura pop
     justify-content: center;
     margin-top: 15%;
   }
-
 }
-
 
 h2.text-red {
   color: #CD2E3A;
@@ -1466,11 +1436,19 @@ h2.text-red {
 
 /********************************************
   Estilos página de enlaces
-  **********************************************/
+**********************************************/
 
 section {
   width: 70%;
   margin-bottom: 40px;
+}
+
+
+@media (max-width: 767px) {
+  section {
+    width: 90%;
+    margin-bottom: 40px;
+  }
 }
 
 .links-page {
@@ -1483,7 +1461,7 @@ section {
 
 /********************************************
   Estilos página de enlaces para enlaces subrayados
-  **********************************************/
+**********************************************/
 
 .links-page li {
   margin-bottom: 20px;
@@ -1532,7 +1510,7 @@ a.link-destacado::after {
 
 /********************************************
   Estilos para el botón de scroll top páginas interiores
-  **********************************************/
+**********************************************/
 .scroll-top {
   position: fixed;
   bottom: 20px;
@@ -1608,7 +1586,7 @@ a.link-destacado::after {
 
 
 /********************************************
-Clip path home
+Clip path home PAC 2
 **********************************************/
 
 /* Contenedor que tiene la forma recortada */

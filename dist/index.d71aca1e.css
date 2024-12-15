@@ -68,6 +68,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (width <= 768px) {
+  body {
+    height: 95%;
+  }
+}
+
 main {
   text-align: center;
   flex-direction: column;
@@ -769,10 +775,6 @@ body.home-page {
   }
 }
 
-.miembros-page body {
-  background-color: #fff;
-}
-
 .clipped-text {
   color: #0000;
   -webkit-text-fill-color: transparent;
@@ -999,45 +1001,24 @@ body.home-page {
 .centrado {
   flex-direction: column;
   align-items: center;
-  width: 90%;
   margin: 0 auto;
   display: flex;
 }
 
-.centrado article {
-  width: 80%;
-  margin: 0 auto;
-}
-
 @media (width <= 767px) {
   .lugares-page {
-    width: 96%;
-  }
-
-  .centrado, .centrado article {
     width: 98%;
   }
-}
 
-@media (width >= 768px) {
-  div.lugares-page {
-    color: #0f64cd;
-    text-align: center;
-    box-sizing: border-box;
-    background-image: url("gwanghwamun-palacio-presentacion-lugares-desk.256fae01.webp");
-    background-position: center;
-    background-size: cover;
-    flex-direction: column;
-    justify-content: center;
+  .centrado {
     width: 100%;
-    min-height: 75vh;
-    padding: 0;
-    font-size: 2.5rem;
-    display: flex;
   }
-}
 
-@media (width <= 767px) {
+  .centrado article {
+    width: 100%;
+    margin: 0 auto;
+  }
+
   div.lugares-page {
     color: #0f64cd;
     text-align: center;
@@ -1052,6 +1033,29 @@ body.home-page {
     margin-top: 15%;
     padding: 35% 2%;
     font-size: 1.5em;
+    display: flex;
+  }
+}
+
+@media (width >= 768px) {
+  .centrado article {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  div.lugares-page {
+    color: #0f64cd;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url("gwanghwamun-palacio-presentacion-lugares-desk.256fae01.webp");
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0;
+    font-size: 2.5rem;
     display: flex;
   }
 }
@@ -1153,6 +1157,13 @@ h2.text-red {
 section {
   width: 70%;
   margin-bottom: 40px;
+}
+
+@media (width <= 767px) {
+  section {
+    width: 90%;
+    margin-bottom: 40px;
+  }
 }
 
 .links-page {
