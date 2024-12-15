@@ -1264,4 +1264,41 @@ a.link-destacado:after {
     background-position: -200% 0;
   }
 }
+
+.clip-image-container {
+  clip-path: polygon(30% 0%, 70% 0%, 90% 50%, 70% 100%, 30% 100%, 10% 50%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.clip-image-container h2 {
+  color: #000;
+}
+
+.clip-content {
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+}
+
+.content-limited-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.clip-image {
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 /*# sourceMappingURL=index.d71aca1e.css.map */
