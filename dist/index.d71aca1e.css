@@ -1154,6 +1154,66 @@ h2.text-red {
   color: #cd2e3a;
 }
 
+.carousel {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  text-align: center;
+  display: none;
+  position: relative;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item h4 {
+  color: #fff;
+  background-color: #00000080;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  background-color: #00000080;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: #000c;
+}
+
+.carousel .active {
+  display: block;
+}
+
 section {
   width: 70%;
   margin-bottom: 40px;

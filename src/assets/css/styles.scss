@@ -1434,6 +1434,74 @@ h2.text-red {
 
 
 
+/* Carrusel página cultura pop*/
+/* Estilos básicos del carrusel */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  text-align: center;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-item h4 {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+/* Botones de navegación */
+button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Mostrar solo el slide activo */
+.carousel .active {
+  display: block;
+}
+
+
+
+
+
 /********************************************
   Estilos página de enlaces
 **********************************************/

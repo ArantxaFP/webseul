@@ -107,6 +107,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Funciones del carrusel
+  let slideIndex = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-item');
+    
+    // Aseguramos que el índice esté dentro de los límites
+    if (index >= slides.length) {
+      slideIndex = 0;
+    } else if (index < 0) {
+      slideIndex = slides.length - 1;
+    }
+
+    // Ocultar todas las imágenes
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+
+    // Mostrar la imagen seleccionada
+    slides[slideIndex].classList.add('active');
+  }
+
+  function moveSlide(direction) {
+    slideIndex += direction;
+    showSlide(slideIndex);
+  }
+
+  // Inicializar el carrusel
+  showSlide(slideIndex);
+
+  // Cambio automático cada 3 segundos
+  setInterval(() => {
+    moveSlide(1);
+  }, 3000);
+
+  // Obtener los botones
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  
+  // Verificar que los botones estén disponibles
+  if (prevButton && nextButton) {
+    // Asignar los eventos a los botones prev/next usando addEventListener
+    prevButton.addEventListener('click', function () {
+      moveSlide(-1); // Mueve el carrusel hacia atrás
+    });
+
+    nextButton.addEventListener('click', function () {
+      moveSlide(1); // Mueve el carrusel hacia adelante
+    });
+  } else {
+    console.log('No se encontraron los botones prev o next');
+  }
+
+  // Iniciar AOS (si está presente)
   AOS.init();
 
 });
