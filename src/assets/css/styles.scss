@@ -1468,7 +1468,9 @@ h2.text-red {
 }
 
 /* Botones de navegación */
-button {
+
+/* Botones de navegación */
+button.carousel-btn  {
   position: absolute;
   top: 50%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -1489,7 +1491,7 @@ button.next {
   right: 10px;
 }
 
-button:hover {
+button.carousel-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
