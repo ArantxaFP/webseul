@@ -1537,17 +1537,32 @@ section {
   margin-bottom: 20px;
 }
 
+/* Estilos para los enlaces */
 a.link-destacado {
   color: #0F64CD;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
   display: inline-block;
-  word-wrap: break-word;
-  white-space: normal; 
+  word-wrap: break-word;  
   overflow-wrap: break-word; 
+  white-space: normal; 
 }
 
+/* Cuando el ancho es menor a 767px (versión móvil) */
+@media (max-width: 767px) {
+  a.link-destacado {
+    word-break: break-all; 
+    white-space: normal;  
+  }
+
+  /* Asegura que los contenedores de los enlaces no desborden en móviles */
+  .links-page li {
+    margin-bottom: 20px;
+    width: 100%; 
+    word-wrap: break-word;
+  }
+}
 
 
 /* Oscurecer el texto al hacer hover */
