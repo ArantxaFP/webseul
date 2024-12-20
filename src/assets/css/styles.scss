@@ -1065,11 +1065,12 @@ body.home-page {
 }
 
 
+
 /*********************************************
-  Estilo flecha arriba y flecha abajo home
+  Estilo flecha abajo (Desktop)
 **********************************************/
 
-/* Estilos para la flecha hacia abajo */
+/* Botón para scroll hacia abajo */
 .scroll-down-arrow {
   position: absolute;
   bottom: 15px;
@@ -1077,33 +1078,20 @@ body.home-page {
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  cursor: pointer;
-  animation: bounce 4s infinite;
+  cursor: pointer; 
+  z-index: 10; 
 }
 
+/* Imagen dentro del botón */
 .scroll-down-arrow img {
   width: 100%;
   height: auto;
+  display: block; 
 }
 
-/* Animación de rebote para la flecha para bajar*/
-@keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
+/* Efecto hover para escritorio */
+.scroll-down-arrow:hover {
+  transform: translateX(-50%) scale(2.5); 
 }
 
 /* Media query para tablet horizontal (768px) e inferiores */

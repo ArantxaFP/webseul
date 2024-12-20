@@ -60,17 +60,34 @@ document.addEventListener('DOMContentLoaded', () => {
       btnScrollTop.classList.toggle("hidden", window.pageYOffset <= 500);
     });
   }
+  
+    // Seleccionar el botón
+    const scrollDownArrow = document.querySelector('.scroll-down-arrow');
 
-  // Manejo del botón "scroll to intro home"
-  const scrollDownArrow = document.querySelector('.scroll-down-arrow');
-  if (scrollDownArrow) {
-    scrollDownArrow.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(scrollDownArrow.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
+    // Verificar si el botón existe
+    if (scrollDownArrow) {
+        scrollDownArrow.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
 
+            // Obtener el destino del atributo href
+            const targetId = scrollDownArrow.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Realizar el scroll suave
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            } else {
+                console.error(`No se encontró el elemento con ID: ${targetId}`);
+            }
+        });
+    } else {
+        console.error('No se encontró el botón scroll-down-arrow');
+    }
+
+    
   // Verificar si el carrusel está presente antes de inicializar
   const slides = document.querySelectorAll('.carousel-item');
   if (slides.length > 0) {
