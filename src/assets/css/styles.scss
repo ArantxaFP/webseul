@@ -1537,14 +1537,18 @@ section {
   margin-bottom: 20px;
 }
 
-/* Estilo inicial del enlace */
 a.link-destacado {
   color: #0F64CD;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
   display: inline-block;
+  word-wrap: break-word;
+  white-space: normal; 
+  overflow-wrap: break-word; 
 }
+
+
 
 /* Oscurecer el texto al hacer hover */
 a.link-destacado:hover {
