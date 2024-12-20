@@ -1764,7 +1764,6 @@ a.link-destacado::after {
 
 .hidden {
   display: none;
-
 }
 
 
@@ -1820,6 +1819,26 @@ a.link-destacado::after {
   100% {
     background-position: -200% 0;
   }
+}
+
+
+/********************************************
+SVG con animación PAC 2
+**********************************************/
+/* Contenedor del SVG */
+.svg-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+}
+
+/* Animación del SVG */
+.animated-svg {
+  width: 100%;
+  height: 100%;
 }
 
 

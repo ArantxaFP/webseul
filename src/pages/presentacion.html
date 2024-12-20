@@ -62,7 +62,35 @@
                 <a href="../pages/links.html" class="button-link">VISITA LA PÁGINA DE ENLACES</a>
             </button>
         </section>
-        
+
+        <div class="svg-animation-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="animated-svg">
+                <!-- Círculo Exterior Animado -->
+                <circle cx="50" cy="50" r="40" fill="none" stroke="url(#gradient)" stroke-width="6" />
+                <!-- Círculo Interior -->
+                <circle cx="50" cy="50" r="20" fill="white" />
+                <!-- Texto -->
+                <text x="50%" y="50%" text-anchor="middle" fill="#0F64CD" font-size="8px" font-family="Arial, sans-serif">
+                    <tspan x="50%" dy="-0.5em">Espero que te</tspan>
+                    <tspan x="50%" dy="1.2em">guste esta web</tspan>
+                </text>
+                <!-- Definición del Gradiente -->
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#CD2E3A">
+                            <animate attributeName="offset" values="0;1;0" dur="3s" repeatCount="indefinite" />
+                        </stop>
+                        <stop offset="50%" stop-color="#0F64CD">
+                            <animate attributeName="offset" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+                        </stop>
+                        <stop offset="100%" stop-color="#CD2E3A">
+                            <animate attributeName="offset" values="1;0;1" dur="3s" repeatCount="indefinite" />
+                        </stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+     
     
         <!-- Flecha SVG para hacer scroll hacia arriba -->
         <div id="btn-scroll-top" class="scroll-top hidden">
