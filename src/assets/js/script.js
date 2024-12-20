@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Obtener la ruta actual (sin el dominio ni el query string)
-    var currentPath = window.location.pathname;
+  var currentPath = window.location.pathname;
 
   // Función para marcar el enlace actual en el menú
   function markCurrentLink(menu) {
@@ -60,36 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
       btnScrollTop.classList.toggle("hidden", window.pageYOffset <= 500);
     });
   }
-  
-    // Seleccionar el botón
-    const scrollDownArrow = document.querySelector('.scroll-down-arrow');
 
-    // Verificar si el botón existe
-    if (scrollDownArrow) {
-        scrollDownArrow.addEventListener('click', (event) => {
-            event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+  // Verificar si el botón "scroll-down-arrow" existe antes de añadir el event listener
+  const scrollDownArrow = document.querySelector('.scroll-down-arrow');
+  if (scrollDownArrow) {
+    scrollDownArrow.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(scrollDownArrow.getAttribute('href'));
 
-            // Obtener el destino del atributo href
-            const targetId = scrollDownArrow.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  } else {
+    console.log('No se encontró el botón scroll-down-arrow');
+  }
 
-            if (targetElement) {
-                // Realizar el scroll suave
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
-            } else {
-                console.error(`No se encontró el elemento con ID: ${targetId}`);
-            }
-        });
-    } else {
-        console.error('No se encontró el botón scroll-down-arrow');
-    }
 
-    
+
   // Verificar si el carrusel está presente antes de inicializar
   const slides = document.querySelectorAll('.carousel-item');
+
   if (slides.length > 0) {
     let slideIndex = 0;
 
@@ -117,14 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevButton && nextButton) {
       prevButton.addEventListener('click', () => moveSlide(-1));
       nextButton.addEventListener('click', () => moveSlide(1));
-    } else {
-      console.log('No se encontraron los botones prev o next');
     }
   } else {
-    console.log('No se encontró el carrusel en esta página');
   }
 
+  // Inicialización de AOS
   if (typeof AOS !== 'undefined') {
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
   }
+
 });
