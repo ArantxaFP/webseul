@@ -693,6 +693,33 @@ body.home-page {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
+   position: relative;
+}
+
+/* Borde blanco alrededor del texto */
+.clipped-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+    z-index: -1; /* Lo coloca detrás del texto */
+}
+
+/* Estilo para la imagen dentro del <picture> */
+.home-page picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; 
 }
 
 /* Media query para dispositivos grandes (min-width: 768px) */
@@ -708,11 +735,6 @@ body.home-page {
   .clipped-text {
     font-size: 2.4em;
   }
-
-  .image-column {
-    overflow: hidden; 
-  }
-  
 }
 
 /* Media query para dispositivos móviles (max-width: 767px) */
@@ -725,10 +747,10 @@ body.home-page {
     text-align: center;
     width: 100%;
     min-height: 100vh; 
-    padding: 0; 
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     margin-top: 0;
   }
 
@@ -743,13 +765,14 @@ body.home-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%; 
+    height: 40%; 
   }
 
   .clipped-text {
     font-size: 6vw; 
   }
 }
+
 
 
 .highlight {
