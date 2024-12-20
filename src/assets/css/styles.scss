@@ -680,7 +680,6 @@ body.home-page {
   flex-direction: column;
   padding: 0 10px;
 }
-
 /* Estilos del título */
 .clipped-text {
   font-family: 'Montserrat', sans-serif;
@@ -692,7 +691,8 @@ body.home-page {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
-   position: relative;
+  position: relative;
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.984); 
 }
 
 /* Borde blanco alrededor del texto */
@@ -707,7 +707,7 @@ body.home-page {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-    z-index: -1; /* Lo coloca detrás del texto */
+  z-index: -1; /* Lo coloca detrás del texto */
 }
 
 /* Estilo para la imagen dentro del <picture> */
@@ -718,7 +718,7 @@ body.home-page {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2; 
+  z-index: -2; /* Lo coloca detrás de todo el contenido */
 }
 
 /* Media query para dispositivos grandes (min-width: 768px) */
@@ -745,7 +745,7 @@ body.home-page {
     font-size: 1.5em;
     text-align: center;
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -764,14 +764,13 @@ body.home-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40%; 
+    height: 40%;
   }
 
   .clipped-text {
     font-size: 6vw; 
   }
 }
-
 
 
 .highlight {
