@@ -88,6 +88,16 @@ body {
   overflow-x: hidden;
 }
 
+/* General */
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+
 @media (max-width: 768px) {
 body {
   height: 95%;
