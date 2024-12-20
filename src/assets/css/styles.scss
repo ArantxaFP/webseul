@@ -680,7 +680,27 @@ body.home-page {
   flex-direction: column;
   padding: 0 10px;
 }
+
+
 /* Estilos del título */
+.clipped-text-container {
+  position: relative; /* Para posicionar la caja debajo del texto */
+  z-index: 1;
+}
+
+/* Fondo gris debajo del texto */
+.clipped-text-container::after {
+  content: ''; /* Crear un pseudo-elemento */
+  position: absolute;
+  top: 30%; 
+  left: 0;
+  right: 0;
+  height: 340px; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: -1; /* Lo coloca debajo del texto */
+}
+
+/* Estilo del texto con fondo recortado */
 .clipped-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -692,33 +712,6 @@ body.home-page {
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
   position: relative;
-  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.984); 
-}
-
-/* Borde blanco alrededor del texto */
-.clipped-text::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  z-index: -1; /* Lo coloca detrás del texto */
-}
-
-/* Estilo para la imagen dentro del <picture> */
-.home-page picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2; /* Lo coloca detrás de todo el contenido */
 }
 
 /* Media query para dispositivos grandes (min-width: 768px) */
@@ -768,7 +761,8 @@ body.home-page {
   }
 
   .clipped-text {
-    font-size: 6vw; 
+    font-size: 6vw; /* Ajusta el tamaño de la fuente para móviles */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Sombra para el contraste */
   }
 }
 
