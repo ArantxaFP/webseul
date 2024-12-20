@@ -67,6 +67,13 @@ p {
   line-height: 150%;
 }
 
+
+h2.text-center {
+  color: #333;
+  text-align: center; 
+}
+
+
 /********************************************
   Estilos contenedores
 **********************************************/
@@ -150,7 +157,6 @@ main {
 
 
 @media (max-width: 767px) {
-
   .header,
   .header-container-home {
     width: 100%;
@@ -588,8 +594,87 @@ body.home-page {
 /********************************************
   Imagen gif dentro de texto título header home
 **********************************************/
+/* Estilos generales para .home-page */
+.home-page {
+  width: 100%;
+  height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative; /* Para posicionar el contenido sobre la imagen */
+  overflow: hidden; /* Evita que se vea cualquier contenido fuera del contenedor */
+}
+
+/* Estilo para la imagen dentro del <picture> */
+.home-page picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estilo para el contenedor de texto */
+.text-container {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px; /* Espaciado para dispositivos móviles */
+}
 
 
+/********************************************
+  Imagen gif dentro de texto título header home
+**********************************************/
+/* Estilos generales para .home-page */
+.home-page {
+  width: 100%;
+  min-height: 100vh; /* Ajustamos para que ocupe al menos la altura de la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible; /* Asegura que el contenido debajo sea accesible */
+}
+
+/* Estilo para la imagen dentro del <picture> */
+.home-page picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estilo para el contenedor de texto */
+.text-container {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+/* Estilos del título */
 .clipped-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -599,46 +684,27 @@ body.home-page {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 2rem;
 }
 
-/* Media query para tablet horizontal (768px) y mayores */
+/* Media query para dispositivos grandes (min-width: 768px) */
 @media (min-width: 768px) {
-  div.home-page {
-    background-image: url("../img/header_home_ciudad_seul_noche_desk.webp");
-    padding: 0 0;
-    font-size: 2.5rem;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   div.home-page h1 {
     font-size: 2.4em;
   }
 
   .text-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-size: 2rem;
+  }
+
+  .clipped-text {
+    font-size: 2.4em;
   }
 }
 
-
-/* Media query para tablet horizontal (768px) e inferiores */
+/* Media query para dispositivos móviles (max-width: 767px) */
 @media (max-width: 767px) {
   div.home-page {
-    background-image: url("../img/header_home_ciudad_seul_noche_mob.webp");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -646,13 +712,12 @@ body.home-page {
     font-size: 1.5em;
     text-align: center;
     width: 100%;
-    padding: 35% 2%;
-    box-sizing: border-box;
-    min-height: 10vh;
+    min-height: 100vh; 
+    padding: 0; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 15%;
+    justify-content: center; 
+    margin-top: 0;
   }
 
   div.home-page h1 {
@@ -666,13 +731,14 @@ body.home-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 50%; 
   }
 
   .clipped-text {
-    font-size: 20vw;
+    font-size: 6vw; /* Tamaño de fuente ajustado para dispositivos pequeños */
   }
 }
+
 
 .highlight {
   color: #0F64CD;
@@ -681,6 +747,7 @@ body.home-page {
   background-clip: text;
   -webkit-text-fill-color: #0F64CD;
 }
+
 
 
 
@@ -707,10 +774,27 @@ body.home-page {
 
 
 #intro-home {
-  padding-top: 3%;
-  padding-bottom: 3%;
-
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
+
+@media (max-width: 767px) {
+  #intro-home {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+
+
+
+#intro-home h2, 
+#intro-home p {
+  color: #333; 
+  display: block; 
+  visibility: visible; 
+  opacity: 1; 
+}
+
 
 /* Estilo general para las filas */
 .row {
@@ -728,19 +812,22 @@ body.home-page {
 }
 
 .image-column {
-  flex: 2;
-  /* Ocupa 2/3 en escritorio */
+  flex: 2; /* Ocupa 2/3 en escritorio */
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
 }
 
 .text-column {
-  flex: 1;
-  /* Ocupa 1/3 en escritorio */
+  flex: 1; /* Ocupa 1/3 en escritorio */
 }
 
-.image-column img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+/* Estilos para las imágenes dentro de .image-column */
+.image-column picture img {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 10px; /* Bordes redondeados */
+  display: block; /* Elimina posibles espacios blancos */
 }
 
 /* Estilos específicos para la sección de accesos */
@@ -756,25 +843,38 @@ body.home-page {
 /* Estilos para móviles */
 @media (max-width: 768px) {
   .row {
-    flex-direction: column;
+    flex-direction: column; /* Cambia las filas a columnas */
     padding: 10px;
   }
 
   /* Asegura que orden mobile img + txt */
   .image-column {
-    order: -1;
-    width: 90%;
+    order: -1; /* Mueve la imagen arriba */
+    width: 90%; /* Asegura ancho responsivo */
   }
 
   .text-column {
-    order: 1;
-    width: 90%;
+    order: 1; /* Mueve el texto abajo */
+    width: 90%; /* Asegura ancho responsivo */
   }
 
   .links-row {
     flex-direction: column;
   }
+
+  .image-column picture img {
+    width: 100%; /* Asegura que la imagen sea responsiva */
+    height: auto; /* Mantiene proporciones */
+    display: block; /* Elimina posibles espacios blancos */
+  }
 }
+
+/* Evita que otros <picture> se vean afectados */
+.image-column picture {
+  position: static; /* Desactiva el estilo absoluto que no aplica aquí */
+}
+
+
 
 
 .icon-container {
@@ -820,19 +920,22 @@ body.home-page {
 .image-container-namsan {
   width: 100%;
   height: 700px;
-  background-image: url("../img/seul_contrastes_arquitectonicos_desk.webp");
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 
-/* Reglas para móviles */
+.image-container-namsan img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media (max-width: 767px) {
   .image-container-namsan {
-    background-image: url("../img/seul_contrastes_arquitectonicos_mob.webp");
     height: 200px;
-
   }
 }
+
 
 
 /*********************************************
@@ -1553,7 +1656,7 @@ a.link-destacado {
 @media (max-width: 767px) {
   a.link-destacado {
     word-break: break-all; 
-    white-space: normal;  
+    white-space: normal;
   }
 
   /* Asegura que los contenedores de los enlaces no desborden en móviles */

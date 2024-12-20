@@ -45,6 +45,15 @@
     <!-- Contenido principal -->
     <main id="main-home">
         <div class="home-page">
+            <picture>
+                <!-- Imagen para pantallas móviles -->
+                <source srcset="./assets/img/header_home_ciudad_seul_noche_mob.webp" media="(max-width: 767px)">
+                <!-- Imagen para pantallas más grandes -->
+                <source srcset="./assets/img/header_home_ciudad_seul_noche_desk.webp" media="(min-width: 768px)">
+                <!-- Imagen predeterminada para cualquier otro caso -->
+                <img src="./assets/img/header_home_ciudad_seul_noche_desk.webp" alt="Imagen de Seúl">
+            </picture>
+
             <div class="text-container">
                 <h1 class="clipped-text">Descubre Seúl: <br>historia, lugares y cultura</h1>
             </div>
@@ -58,7 +67,7 @@
             <h2 class="text-center">Seúl, la capital de Corea del Sur.</h2>
             <p>Una ciudad llena de historia milenaria, un centro vibrante de cultura pop y entretenimiento.
                 Te enseñaremos desde palacios reales hasta los escenarios de tus series favoritas de Netflix, ¡explora
-                todo lo que Seúl tiene para ofrecer!"</p>
+                todo lo que Seúl tiene para ofrecer!</p>
         </section>
 
         <div class="image-container">
@@ -83,9 +92,6 @@
             <img src="./assets/img/seul-clip-path-fondo-superior.jpg" alt="Imagen de paisaje de Seúl con contaminación"
                 class="clip-image">
         </div>
-
-
-
         <div class="clip-image-container">
             <div class="clip-content">
                 <div class="content-limited-width" data-aos="fade-up">
@@ -97,9 +103,6 @@
         </div>
 
 
-
-
-
         <!-- Primera fila: Texto a la izquierda, imagen a la derecha -->
         <div class="row">
             <div class="text-column">
@@ -107,78 +110,108 @@
                 <p>Explora los tesoros de Seúl: una ciudad llena de historia y cultura.</p>
                 <div class="espacio-en-blanco"></div>
                 <a href="./pages/lugares-interes.html" class="seul-button">Conoce lugares de interés</a>
-
             </div>
             <div class="image-column">
-                <img src="./assets/img/lugares-interes-rio-han_desk.webp" alt="Lugares de Interés en Seúl rio Han">
+                <picture>
+                    
+                    <source srcset="./assets/img/lugares-interes-rio-han_mob.webp" media="(max-width: 767px)">
+                   
+                    <source srcset="./assets/img/lugares-interes-rio-han_tab.webp" media="(min-width: 768px)">
+                   
+                    <img src="./assets/img/lugares-interes-rio-han_desk.webp" alt="Lugares de Interés en Seúl rio Han">
+                </picture>
             </div>
         </div>
+
 
         <!-- Segunda fila: Imagen a la izquierda, texto a la derecha -->
         <div class="row">
             <div class="image-column">
-                <img src="./assets/img/cultura_kpop_bts_desk.webp" alt="cultura kpop grupo BTS">
-            </div>
-            <div class="text-column">
-                <h3>Cultura Pop</h3>
-                <p>Seúl en el mundo del entretenimiento: conoce las series y los <em>idols</em> que la han hecho
-                    reconocida a
-                    nivel mundial.</p>
-                <div class="espacio-en-blanco"></div>
-                <a href="./pages/cultura-pop.html" class="seul-button">Conoce la cultura de Seúl</a>
-            </div>
-        </div>
-
-        <div class="icon-container ">
-            <div class="text-column">
-                <h3>Presentación</h3>
-                <p>Conoce la estructura de esta web</p>
-                <a href="./pages/presentacion.html" class="icon-link">
-                    <!-- SVG del icono "Presentación" -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
-                        <path
-                            d="M20 3H4c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h16c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2zm-1 14H5V8h14v9zm-5-3h4v2h-4v-2zm0-4h4v2h-4V10zM7 11h6v1.5H7V11zm0 3h6v1.5H7V14z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
-            <div class="text-column">
-                <h3>Enlaces</h3>
-                <p>Consulta las fuentes y recursos utilizados</p>
 
 
-                <a href="./pages/links.html" class="icon-link">
-                    <!-- SVG del icono "Enlace roto" de  -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
-                        <path
-                            d="M21 13v7a1 1 0 0 1-1 1h-7v-2h6v-6h2zm-10-7h-6v6h-2v-7a1 1 0 0 1 1-1h7v2zm-1 7h4v2h-4v-2zm10.707-10.707 1.414 1.414L18.414 7l-1.414-1.414L20.707 2.293zM5.586 17 3.293 19.293l1.414 1.414L7 18.414 5.586 17zm8.536-13.78 1.415 1.415-7.072 7.071-1.415-1.414 7.072-7.072zm-1.414 15.95 7.072 7.072-1.414 1.414-7.072-7.072 1.414-1.414z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="espacio-en-blanco"></div>
-        <div class="espacio-en-blanco"></div>
-        <div class="image-container-namsan"></div>
-        <div class="centrado-blockquote">
-            <blockquote>En Seúl, los contrastes son intensos: en un lado tienes estos rascacielos modernos y, en el
-                otro, casas antiguas y colinas verdes. Es una ciudad que siempre se está reinventando, pero que sigue
-                aferrándose a sus raíces.</blockquote>
-            <h4> - Bong Joon-ho, famoso director de cine surcoreano, ganador del Oscar por "Parásitos". </h4>
-        </div>
-        <div id="contenedor-texto-skyline">
-            <img id="skyline" src="./assets/img/skyline_seul_animacion.gif" alt="Ilustración Skyline Seúl">
-        </div>
+                <div class="image-column">
+                    <picture>
+                        <source srcset="./assets/img/cultura_kpop_bts_mob.webp" media="(max-width: 767px)">
 
-        <!-- Flecha SVG para hacer scroll hacia arriba -->
-        <div id="btn-scroll-top" class="scroll-top hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
-                style="fill: #CD2E3A; cursor: pointer;">
-                <path
-                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
-                </path>
-            </svg>
-        </div>
+                        <source srcset="./assets/img/cultura_kpop_bts_tab.webp" media="(min-width: 768px)">
+
+                        <img src="./assets/img/cultura_kpop_bts_desk.webp" alt="cultura kpop grupo BTS">
+                    </picture>
+
+
+                </div>
+                <div class="text-column">
+                    <h3>Cultura Pop</h3>
+                    <p>Seúl en el mundo del entretenimiento: conoce las series y los <em>idols</em> que la han hecho
+                        reconocida a
+                        nivel mundial.</p>
+                    <div class="espacio-en-blanco"></div>
+                    <a href="./pages/cultura-pop.html" class="seul-button">Conoce la cultura de Seúl</a>
+                </div>
+            </div>
+
+            <div class="icon-container ">
+                <div class="text-column">
+                    <h3>Presentación</h3>
+                    <p>Conoce la estructura de esta web</p>
+                    <a href="./pages/presentacion.html" class="icon-link">
+                        <!-- SVG del icono "Presentación" -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path
+                                d="M20 3H4c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h16c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2zm-1 14H5V8h14v9zm-5-3h4v2h-4v-2zm0-4h4v2h-4V10zM7 11h6v1.5H7V11zm0 3h6v1.5H7V14z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="text-column">
+                    <h3>Enlaces</h3>
+                    <p>Consulta las fuentes y recursos utilizados</p>
+
+
+                    <a href="./pages/links.html" class="icon-link">
+                        <!-- SVG del icono "Enlace roto" de  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                            <path
+                                d="M21 13v7a1 1 0 0 1-1 1h-7v-2h6v-6h2zm-10-7h-6v6h-2v-7a1 1 0 0 1 1-1h7v2zm-1 7h4v2h-4v-2zm10.707-10.707 1.414 1.414L18.414 7l-1.414-1.414L20.707 2.293zM5.586 17 3.293 19.293l1.414 1.414L7 18.414 5.586 17zm8.536-13.78 1.415 1.415-7.072 7.071-1.415-1.414 7.072-7.072zm-1.414 15.95 7.072 7.072-1.414 1.414-7.072-7.072 1.414-1.414z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="espacio-en-blanco"></div>
+            <div class="espacio-en-blanco"></div>
+            <div class="image-container-namsan">
+
+                <picture>
+                    <!-- Imagen para pantallas móviles -->
+                    <source srcset="./assets/img/seul_contrastes_arquitectonicos_mob.webp" media="(max-width: 767px)">
+                    <!-- Imagen para pantallas más grandes -->
+                    <source srcset="./assets/img/seul_contrastes_arquitectonicos_desk.webp" media="(min-width: 768px)">
+                    <!-- Imagen predeterminada para cualquier otro caso -->
+                    <img src="./assets/img/seul_contrastes_arquitectonicos_desk.webp" alt="Imagen de Seúl">
+                </picture>
+            </div>
+
+            <div class="centrado-blockquote">
+                <blockquote>En Seúl, los contrastes son intensos: en un lado tienes estos rascacielos modernos y, en el
+                    otro, casas antiguas y colinas verdes. Es una ciudad que siempre se está reinventando, pero que
+                    sigue
+                    aferrándose a sus raíces.</blockquote>
+                <h4> - Bong Joon-ho, famoso director de cine surcoreano, ganador del Oscar por "Parásitos". </h4>
+            </div>
+            <div id="contenedor-texto-skyline">
+                <img id="skyline" src="./assets/img/skyline_seul_animacion.gif" alt="Ilustración Skyline Seúl">
+            </div>
+
+            <!-- Flecha SVG para hacer scroll hacia arriba -->
+            <div id="btn-scroll-top" class="scroll-top hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"
+                    style="fill: #CD2E3A; cursor: pointer;">
+                    <path
+                        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V9.41l2.59 2.58L17 11l-5-5-5 5 1.41 1.41L11 9.41v7.52a8 8 0 1 1 2 0z">
+                    </path>
+                </svg>
+            </div>
     </main>
 
 
