@@ -692,10 +692,10 @@ body.home-page {
 .clipped-text-container::after {
   content: ''; /* Crear un pseudo-elemento */
   position: absolute;
-  top: 30%; 
+  top: 30%;
   left: 0;
   right: 0;
-  height: 340px; 
+  height: 340px;
   background-color: rgba(0, 0, 0, 0.8); 
   z-index: -1; /* Lo coloca debajo del texto */
 }
@@ -710,7 +710,6 @@ body.home-page {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2rem;
   position: relative;
 }
 
@@ -727,6 +726,10 @@ body.home-page {
   .clipped-text {
     font-size: 2.4em;
   }
+
+  .clipped-text-container::after {
+    width: 100%; 
+  }
 }
 
 /* Media query para dispositivos móviles (max-width: 767px) */
@@ -735,7 +738,7 @@ body.home-page {
     background-size: cover;
     background-position: center;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     width: 100%;
     min-height: 100vh;
@@ -747,22 +750,26 @@ body.home-page {
   }
 
   div.home-page h1 {
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin: 10px;
   }
 
   .text-container {
     position: relative;
-    width: 90%;
+    width: 90%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40%;
+    height: 30%;
   }
 
   .clipped-text {
-    font-size: 6vw; /* Ajusta el tamaño de la fuente para móviles */
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Sombra para el contraste */
+    font-size: 1vw; /* Ajusta el tamaño de la fuente para móviles */
+  }
+
+  .clipped-text-container::after {
+    width: 100%; /* Se asegura de que el recuadro se ajuste al ancho del contenedor */
+    height: 150px; /* Ajusta la altura para hacerlo más pequeño en móviles */
   }
 }
 
