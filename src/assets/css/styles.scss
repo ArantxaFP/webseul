@@ -652,7 +652,7 @@ body.home-page {
 /* Estilo para la imagen dentro del <picture> */
 .home-page picture {
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -700,6 +700,11 @@ body.home-page {
   .clipped-text {
     font-size: 2.4em;
   }
+
+  .image-column {
+    overflow: hidden; 
+  }
+  
 }
 
 /* Media query para dispositivos móviles (max-width: 767px) */
@@ -735,7 +740,7 @@ body.home-page {
   }
 
   .clipped-text {
-    font-size: 6vw; /* Tamaño de fuente ajustado para dispositivos pequeños */
+    font-size: 6vw; 
   }
 }
 
@@ -761,7 +766,6 @@ body.home-page {
   margin-right: auto;
   max-width: 80%;
   text-align: center;
-
 }
 
 .container-info section {
@@ -774,13 +778,13 @@ body.home-page {
 
 
 #intro-home {
-  padding-top: 10%;
+  padding-top: 15%;
   padding-bottom: 5%;
 }
 
 @media (max-width: 767px) {
   #intro-home {
-    padding-top: 3%;
+    padding-top: 15%;
     padding-bottom: 3%;
   }
 }
@@ -811,63 +815,50 @@ body.home-page {
   padding: 20px;
 }
 
+/* Configuración para dispositivos de escritorio */
 .image-column {
-  flex: 2; /* Ocupa 2/3 en escritorio */
-  display: flex;
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  align-items: center; /* Centra las imágenes verticalmente */
+  flex: 2; /* Ocupa 2/3 del ancho */
 }
 
 .text-column {
-  flex: 1; /* Ocupa 1/3 en escritorio */
+  flex: 1; /* Ocupa 1/3 del ancho */
 }
 
-/* Estilos para las imágenes dentro de .image-column */
-.image-column picture img {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: auto; /* Mantiene las proporciones */
-  border-radius: 10px; /* Bordes redondeados */
-  display: block; /* Elimina posibles espacios blancos */
-}
-
-/* Estilos específicos para la sección de accesos */
-.links-row {
-  flex-direction: row;
-}
-
-.links-row .text-column {
-  flex: 1;
-  text-align: center;
-}
-
-/* Estilos para móviles */
+/* Configuración específica para móviles */
 @media (max-width: 768px) {
   .row {
-    flex-direction: column; /* Cambia las filas a columnas */
-    padding: 10px;
+    flex-direction: column; 
+    align-items: center; 
   }
 
-  /* Asegura que orden mobile img + txt */
-  .image-column {
-    order: -1; /* Mueve la imagen arriba */
-    width: 90%; /* Asegura ancho responsivo */
-  }
-
+  .image-column,
   .text-column {
-    order: 1; /* Mueve el texto abajo */
-    width: 90%; /* Asegura ancho responsivo */
+    flex: none; 
+    width: 100%; 
+    padding: 10px; 
   }
 
-  .links-row {
-    flex-direction: column;
+  .image-column {
+    order: -1; 
   }
 
   .image-column picture img {
-    width: 100%; /* Asegura que la imagen sea responsiva */
-    height: auto; /* Mantiene proporciones */
-    display: block; /* Elimina posibles espacios blancos */
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    max-width: 100vw; 
+  }
+  
+  .image-column {
+    overflow: hidden; 
+  }
+  
+
+  .text-column {
+    order: 1; /* El texto permanece debajo */
   }
 }
+
 
 /* Evita que otros <picture> se vean afectados */
 .image-column picture {
@@ -875,8 +866,7 @@ body.home-page {
 }
 
 
-
-
+/* Bloque de iconos home */
 .icon-container {
   display: flex;
   gap: 20px;
@@ -910,93 +900,100 @@ body.home-page {
   color: red;
 }
 
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .icon-container {
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: center; 
+    width: 100%; 
+  }
+
+  .text-column {
+    width: 100%; /* Cada columna ocupa el ancho completo */
+  }
+}
+
 
 
 
 /********************************************
-  Imagen interior home
+  Imagen interior home (específico para .image-container)
 **********************************************/
 
+/* Contenedor de la imagen */
+.image-container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+/* Estilo específico para imágenes en .image-container */
+.image-container > picture {
+  position: static !important; 
+}
+
+.image-container > picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  display: block; 
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media (max-width: 767px) {
+  .image-container {
+    height: 200px; 
+  }
+
+  .image-container > picture img {
+    object-fit: cover; 
+    object-position: center; 
+  }
+}
+
+
+
+
+/********************************************
+  Estilo específico para .image-container-namsan
+**********************************************/
+
+/* Contenedor general */
 .image-container-namsan {
   width: 100%;
   height: 700px;
   position: relative;
+  overflow: hidden; /* Asegura que no haya desbordamientos */
 }
 
-.image-container-namsan img {
+/* Estilo específico para imágenes dentro de <picture> */
+.image-container-namsan > picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
-@media (max-width: 767px) {
+/* Configuración específica para móviles */
+@media (max-width: 768px) {
   .image-container-namsan {
-    height: 200px;
+    height: 200px; 
+  }
+
+  .image-container-namsan > picture img {
+    object-fit: cover;
+    object-position: center;
   }
 }
 
-
-
-/*********************************************
-  Estilo flecha arriba y flecha abajo home
-**********************************************/
-
-/* Estilos para la flecha hacia abajo */
-.scroll-down-arrow {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  animation: bounce 4s infinite;
+/* Asegura que no se aplique posición absoluta */
+.image-container-namsan > picture {
+  position: static !important; 
 }
-
-.scroll-down-arrow img {
-  width: 100%;
-  height: auto;
-}
-
-/* Animación de rebote para la flecha para bajar*/
-@keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
-
-/* Media query para tablet horizontal (768px) e inferiores */
-@media (max-width: 767px) {
-  .scroll-down-arrow {
-    display: none;
-  }
-
-  .scroll-down-arrow img {
-    display: none;
-  }
-}
-
-
-/* Estilos para el botón de scroll hacia arriba */
-.scroll-top svg {
-  fill: #CD2E3A;
-  cursor: pointer;
-}
-
 
 
 /*********************************************
@@ -1066,6 +1063,67 @@ body.home-page {
     font-size: 0.9rem;
   }
 }
+
+
+/*********************************************
+  Estilo flecha arriba y flecha abajo home
+**********************************************/
+
+/* Estilos para la flecha hacia abajo */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  animation: bounce 4s infinite;
+}
+
+.scroll-down-arrow img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animación de rebote para la flecha para bajar*/
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Media query para tablet horizontal (768px) e inferiores */
+@media (max-width: 767px) {
+  .scroll-down-arrow {
+    display: none;
+  }
+
+  .scroll-down-arrow img {
+    display: none;
+  }
+}
+
+
+/* Estilos para el botón de scroll hacia arriba */
+.scroll-top svg {
+  fill: #CD2E3A;
+  cursor: pointer;
+}
+
 
 
 

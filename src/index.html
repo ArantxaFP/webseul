@@ -71,9 +71,13 @@
         </section>
 
         <div class="image-container">
-            <img src="./assets/img/seul_edificios_negocios_desk.webp" alt="Imagen de edificios zona moderna de Seúl">
+            <picture>
+                <source srcset="./assets/img/seul_edificios_negocios_mob.webp" media="(max-width: 767px)">
+                 <source srcset="./assets/img/seul_edificios_negocios_tab.webp" media="(min-width: 768px)">
+                 <img src="./assets/img/seul_edificios_negocios_desk.webp" alt="Imagen de edificios zona moderna de Seúl">
+             </picture>
         </div>
-
+       
         <div class="content-limited-width">
             <div class="espacio-en-blanco"></div>
             <h3>Déjate cautivar por una de las ciudades más sorprendentes del mundo, empezando por esta web.</h3>
@@ -113,32 +117,21 @@
             </div>
             <div class="image-column">
                 <picture>
-                    
-                    <source srcset="./assets/img/lugares-interes-rio-han_mob.webp" media="(max-width: 767px)">
-                   
+                   <source srcset="./assets/img/lugares-interes-rio-han_mob.webp" media="(max-width: 767px)">
                     <source srcset="./assets/img/lugares-interes-rio-han_tab.webp" media="(min-width: 768px)">
-                   
                     <img src="./assets/img/lugares-interes-rio-han_desk.webp" alt="Lugares de Interés en Seúl rio Han">
                 </picture>
             </div>
         </div>
 
-
-        <!-- Segunda fila: Imagen a la izquierda, texto a la derecha -->
         <div class="row">
             <div class="image-column">
-
-
                 <div class="image-column">
                     <picture>
                         <source srcset="./assets/img/cultura_kpop_bts_mob.webp" media="(max-width: 767px)">
-
                         <source srcset="./assets/img/cultura_kpop_bts_tab.webp" media="(min-width: 768px)">
-
                         <img src="./assets/img/cultura_kpop_bts_desk.webp" alt="cultura kpop grupo BTS">
                     </picture>
-
-
                 </div>
                 <div class="text-column">
                     <h3>Cultura Pop</h3>
@@ -149,8 +142,8 @@
                     <a href="./pages/cultura-pop.html" class="seul-button">Conoce la cultura de Seúl</a>
                 </div>
             </div>
-
-            <div class="icon-container ">
+            <div class="espacio-en-blanco"></div>
+            <div class="icon-container">
                 <div class="text-column">
                     <h3>Presentación</h3>
                     <p>Conoce la estructura de esta web</p>
@@ -166,8 +159,6 @@
                 <div class="text-column">
                     <h3>Enlaces</h3>
                     <p>Consulta las fuentes y recursos utilizados</p>
-
-
                     <a href="./pages/links.html" class="icon-link">
                         <!-- SVG del icono "Enlace roto" de  -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
@@ -180,23 +171,20 @@
             </div>
             <div class="espacio-en-blanco"></div>
             <div class="espacio-en-blanco"></div>
-            <div class="image-container-namsan">
 
+            <div class="image-container-namsan">
                 <picture>
-                    <!-- Imagen para pantallas móviles -->
                     <source srcset="./assets/img/seul_contrastes_arquitectonicos_mob.webp" media="(max-width: 767px)">
-                    <!-- Imagen para pantallas más grandes -->
                     <source srcset="./assets/img/seul_contrastes_arquitectonicos_desk.webp" media="(min-width: 768px)">
-                    <!-- Imagen predeterminada para cualquier otro caso -->
-                    <img src="./assets/img/seul_contrastes_arquitectonicos_desk.webp" alt="Imagen de Seúl">
+                    <img src="./assets/img/seul_contrastes_arquitectonicos_desk.webp" alt="Imagen de edificio antiguo de Seúl">
                 </picture>
             </div>
 
+            <div class="espacio-en-blanco"></div>
             <div class="centrado-blockquote">
                 <blockquote>En Seúl, los contrastes son intensos: en un lado tienes estos rascacielos modernos y, en el
                     otro, casas antiguas y colinas verdes. Es una ciudad que siempre se está reinventando, pero que
-                    sigue
-                    aferrándose a sus raíces.</blockquote>
+                    sigue aferrándose a sus raíces.</blockquote>
                 <h4> - Bong Joon-ho, famoso director de cine surcoreano, ganador del Oscar por "Parásitos". </h4>
             </div>
             <div id="contenedor-texto-skyline">
@@ -221,7 +209,7 @@
             <div class="logo-footer">
                 <a href="./index.html"><img src="./assets/img/logo-footer.png" alt="ciudad de Seúl Logo"></a>
                 <div>
-                    <p>2024 © PAC 1 html sobre la ciudad de Seúl</p>
+                    <p>2024 © PAC 2 html sobre la ciudad de Seúl</p>
                     <p>Actividad realizada por Aránzazu Fernández</p>
                 </div>
             </div>
