@@ -505,10 +505,17 @@ main {
   font-size: 0.8rem;
 }
 
+.footer ul li {
+  padding-bottom: 10px;
+}
+
+
+
 .footer ul li a {
   color: #333;
   text-decoration: none;
   transition: color 0.3s;
+  padding-bottom: 20px;
 }
 
 
