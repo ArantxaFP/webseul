@@ -281,6 +281,7 @@ main {
 .header-container-home {
   overflow: visible;
   height: auto;
+  max-height: 40px;
 }
 
 
@@ -325,9 +326,15 @@ main {
     display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 15px;
+    padding: 25px;
     align-items: center;
   }
+
+  #main-menu ul li,
+  #main-menu-home ul li {
+    margin-bottom: 2px;
+  }
+
 
   #main-menu-home ul li .submenu {
     display: none;
@@ -374,6 +381,12 @@ main {
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
   }
 
+  #main-menu ul li,
+  #main-menu-home ul li {
+    margin-bottom: 20px;
+  }
+
+  
   header nav ul.is-visible {
     display: flex;
     transform: translateX(0);
