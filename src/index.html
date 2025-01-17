@@ -11,7 +11,7 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
 </head>
 
@@ -47,11 +47,11 @@
         <div class="home-page">
             <picture>
               <!-- Imagen para pantallas móviles -->
-              <source srcset="./assets/img/header_home_ciudad_seul_noche_mob.webp" media="(max-width: 767px)">
+              <source srcset="./assets/img/header_home_ciudad_seul_noche_mob.webp" media="(max-width: 767px)" loading="lazy">
               <!-- Imagen para pantallas más grandes -->
-              <source srcset="./assets/img/header_home_ciudad_seul_noche_desk.webp" media="(min-width: 768px)">
+              <source srcset="./assets/img/header_home_ciudad_seul_noche_desk.webp" media="(min-width: 768px)" loading="lazy">
               <!-- Imagen predeterminada para cualquier otro caso -->
-              <img src="./assets/img/header_home_ciudad_seul_noche_desk.webp" alt="Imagen de Seúl">
+              <img src="./assets/img/header_home_ciudad_seul_noche_desk.webp" alt="Imagen de Seúl" loading="lazy">
             </picture>
           
             <!-- Contenedor con fondo gris debajo del texto -->
@@ -62,7 +62,7 @@
             </div>
           
             <a href="#intro-home" class="scroll-down-arrow">
-              <img src="./assets/img/icon-157360.png" alt="Flecha hacia abajo">
+              <img src="./assets/img/icon-157360.png" alt="Flecha hacia abajo" loading="lazy">
             </a>
           </div>
           
@@ -76,10 +76,10 @@
 
         <div class="image-container">
             <picture>
-                <source srcset="./assets/img/seul_edificios_negocios_mob.webp" media="(max-width: 767px)">
-                <source srcset="./assets/img/seul_edificios_negocios_tab.webp" media="(min-width: 768px)">
+                <source srcset="./assets/img/seul_edificios_negocios_mob.webp" media="(max-width: 767px)" loading="lazy">
+                <source srcset="./assets/img/seul_edificios_negocios_tab.webp" media="(min-width: 768px)" loading="lazy">
                 <img src="./assets/img/seul_edificios_negocios_desk.webp"
-                    alt="Imagen de edificios zona moderna de Seúl">
+                    alt="Imagen de edificios zona moderna de Seúl" loading="lazy">
             </picture>
         </div>
 
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <img src="./assets/img/seul-clip-path-fondo-superior.jpg" alt="Imagen de cielo de Seúl con contaminación"
-                class="clip-image">
+                class="clip-image" loading="lazy">
         </div>
         <div class="clip-image-container">
             <div class="clip-content">
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <img src="./assets/img/seul-clip-path-fondo-inferior.jpg" alt="Imagen de edificios de Seúl con contaminación"
-                class="clip-image">
+                class="clip-image" loading="lazy">
         </div>
 
 
@@ -126,7 +126,7 @@
                         ./assets/img/lugares-interes-rio-han_tab.webp 800w, 
                         ./assets/img/lugares-interes-rio-han_desk.webp 1200w"
                     sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
-                    alt="Lugares de interés en Seúl rio Han">
+                    alt="Lugares de interés en Seúl rio Han" loading="lazy">
             </div>
         </div>
 
@@ -134,8 +134,8 @@
             <div class="image-column">
                 <div class="image-column">
                     <picture>
-                        <source srcset="./assets/img/cultura_kpop_bts_mob.webp" media="(max-width: 767px)">
-                        <source srcset="./assets/img/cultura_kpop_bts_tab.webp" media="(min-width: 768px)">
+                        <source srcset="./assets/img/cultura_kpop_bts_mob.webp" media="(max-width: 767px)" loading="lazy">
+                        <source srcset="./assets/img/cultura_kpop_bts_tab.webp" media="(min-width: 768px)" loading="lazy">
                         <img src="./assets/img/cultura_kpop_bts_desk.webp" alt="cultura kpop grupo BTS" loading="lazy">
                     </picture>
                 </div>
@@ -182,10 +182,10 @@
 
             <div class="image-container-namsan">
                 <picture>
-                    <source srcset="./assets/img/seul_contrastes_arquitectonicos_mob.webp" media="(max-width: 767px)">
-                    <source srcset="./assets/img/seul_contrastes_arquitectonicos_desk.webp" media="(min-width: 768px)">
+                    <source srcset="./assets/img/seul_contrastes_arquitectonicos_mob.webp" media="(max-width: 767px)" loading="lazy">
+                    <source srcset="./assets/img/seul_contrastes_arquitectonicos_desk.webp" media="(min-width: 768px)" loading="lazy">
                     <img src="./assets/img/seul_contrastes_arquitectonicos_desk.webp"
-                        alt="Imagen de edificio antiguo de Seúl">
+                        alt="Imagen de edificio antiguo de Seúl" loading="lazy">
                 </picture>
             </div>
 
@@ -197,7 +197,7 @@
                 <h4> - Bong Joon-ho, famoso director de cine surcoreano, ganador del Oscar por "Parásitos". </h4>
             </div>
             <div id="contenedor-texto-skyline">
-                <img id="skyline" src="./assets/img/skyline_seul_animacion.gif" alt="Ilustración Skyline Seúl">
+                <img id="skyline" src="./assets/img/skyline_seul_animacion.gif" alt="Ilustración Skyline Seúl" loading="lazy">
             </div>
 
             <!-- Flecha SVG para hacer scroll hacia arriba -->
@@ -244,8 +244,8 @@
     </footer>
 
     <!-- Archivo de script JavaScript -->
-    <script src="../node_modules/aos/dist/aos.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="../node_modules/aos/dist/aos.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 
 </body>
 

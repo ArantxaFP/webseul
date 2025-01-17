@@ -17,6 +17,15 @@ html {
   }
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 h1 {
   color: #CD2E3A;
   font-family: cursive;
@@ -42,8 +51,7 @@ h4 {
 a {
   color: #0F64CD;
   text-decoration: none;
-  font-family: 'Montserrat';
-}
+  }
 
 a :hover {
   color: #CD2E3A;
@@ -51,7 +59,6 @@ a :hover {
 }
 
 p {
-  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 1.2rem;
   }
@@ -702,7 +709,6 @@ body.home-page {
 
 /* Estilo del texto con fondo recortado */
 .clipped-text {
-  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: transparent;
   background-image: url("../img/grain-field-7225738_1280.jpg");
@@ -1153,7 +1159,6 @@ body.home-page {
 **********************************************/
 
 .clipped-text {
-  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: transparent;
   background-image: url("../img/grain-field-7225738_1280.jpg");

@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
 </head>
 
@@ -39,7 +39,7 @@
 
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/iu_cantante_seul.webp" alt="Imagen de la cantante IU">
+                    <img src="../assets/img/iu_cantante_seul.webp" alt="Imagen de la cantante IU" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>IU (Lee Ji-eun)</h2>
@@ -65,7 +65,7 @@
             <div class="espacio-en-blanco"></div>
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/jin_cantante_seul.webp" alt="Imagen del cantante Jin de BTS">
+                    <img src="../assets/img/jin_cantante_seul.webp" alt="Imagen del cantante Jin de BTS" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Kim Seok-jin (Jin)</h2>
@@ -91,7 +91,7 @@
             <div class="espacio-en-blanco"></div>
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/bong_joon-ho_director.webp" alt="Imagen del director Bong Joon-ho">
+                    <img src="../assets/img/bong_joon-ho_director.webp" alt="Imagen del director Bong Joon-ho" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Bong Joon-ho</h2>
@@ -115,7 +115,7 @@
             <div class="espacio-en-blanco"></div>
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/Park_Seo-joon_actor.webp" alt="Imagen del actor Park Seo-joon">
+                    <img src="../assets/img/Park_Seo-joon_actor.webp" alt="Imagen del actor Park Seo-joon" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Park Seo-joon</h2>
@@ -150,9 +150,9 @@
                 <!-- Primer slide -->
                 <div class="carousel-item active" data-aos="fade-up" data-aos-duration="1000">
                     <picture>
-                        <source srcset="../assets/img/carrusel_Kim_Yuna_mob.webp" media="(max-width: 600px)">
-                        <source srcset="../assets/img/carrusel_Kim_Yuna_desk.webp" media="(max-width: 1024px)">
-                        <img src="../assets/img/carrusel_Kim_Yuna.webp" alt="Kim Yuna">
+                        <source srcset="../assets/img/carrusel_Kim_Yuna_mob.webp" media="(max-width: 600px)" loading="lazy">
+                        <source srcset="../assets/img/carrusel_Kim_Yuna_desk.webp" media="(max-width: 1024px)" loading="lazy">
+                        <img src="../assets/img/carrusel_Kim_Yuna.webp" alt="Kim Yuna" loading="lazy">
                     </picture>
                     <h4>Kim Yuna (Patinadora artística)</h4>
                 </div>
@@ -160,9 +160,9 @@
                 <!-- Segundo slide -->
                 <div class="carousel-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2000">
                     <picture>
-                        <source srcset="../assets/img/carrusel_g-dragon_mob.webp" media="(max-width: 600px)">
-                        <source srcset="../assets/img/carrusel_g-dragon_desk.webp" media="(max-width: 1024px)">
-                        <img src="../assets/img/carrusel_g-dragon.webp" alt="G-Dragon">
+                        <source srcset="../assets/img/carrusel_g-dragon_mob.webp" media="(max-width: 600px)" loading="lazy">
+                        <source srcset="../assets/img/carrusel_g-dragon_desk.webp" media="(max-width: 1024px)" loading="lazy">
+                        <img src="../assets/img/carrusel_g-dragon.webp" alt="G-Dragon" loading="lazy">
                     </picture>
                     <h4>G-Dragon (Músico, icono del K-pop líder del grupo Big Bang)</h4>
                 </div>
@@ -170,9 +170,9 @@
                 <!-- Tercer slide -->
                 <div class="carousel-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2000">
                     <picture>
-                        <source srcset="../assets/img/carrusel_Song_Kang-ho_mob.webp" media="(max-width: 600px)">
-                        <source srcset="../assets/img/carrusel_Song_Kang-ho_desk.webp" media="(max-width: 1024px)">
-                        <img src="../assets/img/carrusel_Song_Kang-ho.webp" alt="Song Kang-ho">
+                        <source srcset="../assets/img/carrusel_Song_Kang-ho_mob.webp" media="(max-width: 600px)" loading="lazy">
+                        <source srcset="../assets/img/carrusel_Song_Kang-ho_desk.webp" media="(max-width: 1024px)" loading="lazy">
+                        <img src="../assets/img/carrusel_Song_Kang-ho.webp" alt="Song Kang-ho" loading="lazy">
                     </picture>
                     <h4>Song Kang-ho (Actor)</h4>
                 </div>
@@ -180,9 +180,9 @@
                 <!-- Cuarto slide -->
                 <div class="carousel-item" data-aos="fade-up" data-aos-duration="2000">
                     <picture>
-                        <source srcset="../assets/img/carrusel_jisoo_mob.webp" media="(max-width: 600px)">
-                        <source srcset="../assets/img/carrusel_jisoo_desk.webp" media="(max-width: 1024px)">
-                        <img src="../assets/img/carrusel_jisoo.webp" alt="Jisoo">
+                        <source srcset="../assets/img/carrusel_jisoo_mob.webp" media="(max-width: 600px)" loading="lazy">
+                        <source srcset="../assets/img/carrusel_jisoo_desk.webp" media="(max-width: 1024px)" loading="lazy">
+                        <img src="../assets/img/carrusel_jisoo.webp" alt="Jisoo" loading="lazy">
                     </picture>
                     <h4>Jisoo (Cantante del grupo BlackPink)</h4>
                 </div>
@@ -200,7 +200,7 @@
 
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/itaewon-class.webp" alt="Imagen de la serie de Netflix Itaewon Class">
+                    <img src="../assets/img/itaewon-class.webp" alt="Imagen de la serie de Netflix Itaewon Class" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Itaewon Class</h2>
@@ -231,7 +231,7 @@
             <div class="espacio-en-blanco"></div>
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/Start-Up.webp" alt="Imagen de la serie de Netflix Start-Up">
+                    <img src="../assets/img/Start-Up.webp" alt="Imagen de la serie de Netflix Start-Up" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Start-Up</h2>
@@ -282,8 +282,8 @@
 
 
     <!-- Archivo de script JavaScript -->
-    <script src="/node_modules/aos/dist/aos.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="/node_modules/aos/dist/aos.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
 
 </body>
 

@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
 </head>
 
@@ -45,7 +45,7 @@
                 <a href="lugares-interes.html">
                     <div class="image-container">
                         <img src="../assets/img/gwanghwamun-palacio-presentacion-lugares.webp"
-                            alt="Imagen del Palacio de Gwanghwamun">
+                            alt="Imagen del Palacio de Gwanghwamun" loading="lazy">
                         <div class="overlay"></div>
                     </div>
                 </a>
@@ -59,7 +59,7 @@
             <div class="explora">
                 <a href="cultura-pop.html">
                     <div class="image-container">
-                        <img src="../assets/img/iu-presentacion-cultura.webp" alt="Imagen en concierto de IU">
+                        <img src="../assets/img/iu-presentacion-cultura.webp" alt="Imagen en concierto de IU" loading="lazy">
                         <div class="overlay"></div>
                     </div>
                 </a>
@@ -80,7 +80,7 @@
             <h2>Vistas en directo de la ciudad de Seúl</h2>
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/-JhoMGoAfFc"
-                    allowfullscreen></iframe>
+                    allowfullscreen loading="lazy"></iframe>
             </div>
         </section>
 
@@ -101,8 +101,8 @@
 
 
     <!-- Archivo de script JavaScript -->
-    <script src="/node_modules/aos/dist/aos.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="/node_modules/aos/dist/aos.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
 
 
 </body>

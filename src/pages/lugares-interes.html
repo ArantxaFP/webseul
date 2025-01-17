@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
 </head>
 
@@ -28,7 +28,7 @@
             <div class="espacio-en-blanco"></div>
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/palacio-edificio.webp" alt="Imagen del Palacio de Gwanghwamun">
+                    <img src="../assets/img/palacio-edificio.webp" alt="Imagen del Palacio de Gwanghwamun" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Palacio de Gyeongbokgung</h2>
@@ -67,7 +67,7 @@
             <div class="espacio-en-blanco"></div>
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/Bukchon-Hanok-Village.webp" alt="Imagen de Bukchon Hanok Village">
+                    <img src="../assets/img/Bukchon-Hanok-Village.webp" alt="Imagen de Bukchon Hanok Village" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Bukchon Hanok Village</h2>
@@ -102,7 +102,7 @@
 
             <div class="content-list">
                 <div class="image-column">
-                    <img src="../assets/img/namsam_tower.webp" alt="Torre Namsan">
+                    <img src="../assets/img/namsam_tower.webp" alt="Torre Namsan" loading="lazy">
                 </div>
                 <div class="text-column">
                     <h2>Namsan Tower</h2>
@@ -156,8 +156,8 @@
 
 
     <!-- Archivo de script JavaScript -->
-    <script src="/node_modules/aos/dist/aos.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="/node_modules/aos/dist/aos.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
 
 </body>
 
